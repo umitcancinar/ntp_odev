@@ -28,7 +28,7 @@ Visual Studio'da `FaceRecognition.sln` açılır; `FaceRecognition` başlangıç
 1. **Görüntü Seç** ile kendi fotoğrafınızı açın veya kamera numarasını seçip **Kamerayı Başlat** yapın. Windows Ayarlar → Gizlilik ve güvenlik → Kamera → masaüstü uygulamaları iznini kontrol edin.
 2. Tam olarak **bir yüz** görünürken bir takma etiket yazın (ör. `Kişi A`), gönüllü kullanım kutusunu işaretleyin ve **Yüzü Örnek Olarak Kaydet** yapın. Kayıt kamera akışını durdurur; farklı örnek için yeniden başlatın veya başka dosya seçin.
 3. Aynı etiket için en az **3 farklı örnek**, tercihen farklı aydınlatma ve küçük açılarla **5–10 örnek** ekleyin. İkinci gönüllü için `Kişi B` etiketiyle tekrarlayın. Föydeki alternatif kullanılırsa kendi yüzünüzün iki farklı örnek sınıfını açık adlarla etiketleyin; bu, iki kişiyi ayırt ettiğini kanıtlamaz.
-4. **Örneklerle Eğit** yapın. Eğitim yalnızca en az iki etikette üçer geçerli örnek olduğunda açılır.
+4. **Örneklerle Eğit** yapın. Eğitim en az iki etikette üçer geçerli örnek gerektirir; eksik veri varsa uyarı gösterilir ve eğitim yapılmaz.
 5. Eğitimde kullanmadığınız bir görüntü seçin veya kamerayı yeniden başlatın. Her yüzün etiketi ve **LBPH uzaklığı** gösterilir. Düşük uzaklık daha benzerdir; değer güven yüzdesi değildir. Varsayılan eşik **70** üzerindeyse `Bilinmeyen` gösterilir. Bu eşik küçük veri kümenize göre ayarlanmalıdır.
 6. Sonradan örnek eklediyseniz yeniden eğitin. Model uygulama kapanınca silinir; örnekler kalır, sonraki açılışta yeniden eğitim yapabilirsiniz.
 
