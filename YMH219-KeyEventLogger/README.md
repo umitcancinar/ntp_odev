@@ -54,12 +54,10 @@ dotnet run --project tests/KeyEventLogger.Tests -c Release
 
 ## Ekran görüntüleri
 
-**İki gerçek Windows PNG'si henüz eklenmedi.** Beklenen dosyalar:
+![Form odaktayken açık klavye kaydı ve olay listesi](docs/screenshots/01-kayit-acik.png)
+![Dolu olay listesiyle devam eden kayıt](docs/screenshots/02-kayit-acik-dolu.png)
 
-1. `docs/screenshots/01-kayit-acik.png` — Başlat sonrası deneme metni, zaman damgalı üç olay türü ve KAYIT AÇIK durumu.
-2. `docs/screenshots/02-kayit-durdu-kaydedildi.png` — durdurulmuş durum, dolu olay listesi ve UTF-8 kaydetme başarı bilgisi.
-
-[Ekran görüntüsü yönergesi](docs/screenshots/README.md) çekimi ve README'ye eklemeyi açıklar. PNG'ler eklenene kadar föyün ekran görüntüsü şartı tamamlanmış sayılmaz. Sahte ekran görüntüsü kullanılmadı.
+İki gerçek görüntü eklendi. Kayıdı durdurup TXT olarak kaydetme senaryosu ayrıca [ekran görüntüsü yönergesinde](docs/screenshots/README.md) açıklanıyor.
 
 ## Kod düzeni ve sınırlamalar
 

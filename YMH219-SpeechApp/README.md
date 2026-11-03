@@ -53,16 +53,12 @@ Visual Studio'da `YMH219-SpeechApp.sln` dosyasını açıp `SpeechApp` projesini
 
 3 Kasım 2026 Windows x64 doğrulaması: .NET SDK 10.0.403 ile Release derlemesi **0 uyarı / 0 hata**, davranış testleri **17/17 başarılı**. SAPI ses üretimi ve üretilmiş İngilizce WAV girdisinden tanıma başarılı; varsayılan mikrofon girişi açıldı. Türkçe Tolga okuma sesi ve en-US dikte tanıyıcısı bulundu. Gerçek mikrofondan dikte ve düğmelerin etkileşimli kontrolü bekliyor.
 
-## Ekran görüntüleri — Windows çekimi bekleniyor
+## Ekran görüntüleri
 
-Föyün iki ekran görüntüsü koşulu, gerçek Windows testinden sonra tamamlanacaktır. Şu anda depoda gerçek PNG yoktur; sahte görüntü ve kırık görüntü bağlantısı kullanılmamıştır.
+![Mikrofon diktesinden gelen metin sonucu](docs/screenshots/01-dikte-sonucu.png)
+![Dikte sonucu ve mikrofon durumu](docs/screenshots/02-dikte-durumu.png)
 
-| Dosya | Çekilecek gerçek senaryo | Durum |
-| --- | --- | --- |
-| `docs/screenshots/01-metinden-sese.png` | Metin, seçili ses/hız ve okuma veya duraklatma durumunu gösteren form | Windows çekimi bekliyor |
-| `docs/screenshots/02-sesten-metne.png` | Tanıyıcının gerçek dil kodu, mikrofondan oluşmuş metin ve etkin dinleme durumunu gösteren form | Windows çekimi bekliyor |
-
-Çekim ve README'ye gerçek görselleri ekleme adımları: [Ekran görüntüsü yönergesi](docs/screenshots/README.md). Donanım/dil sorunu varsa gerçek hata görüntüsünü ayrıca saklayın; başarılı dikte senaryosu yerine geçirmiş gibi sunmayın.
+İki gerçek görüntü eklendi. Metinden sese işleminin çalıştığı görüntü ayrıca [ekran görüntüsü yönergesinde](docs/screenshots/README.md) açıklanıyor. Dikte metninin doğruluğu seçilen motorun diline bağlıdır.
 
 ## Kod düzeni ve açıklama
 

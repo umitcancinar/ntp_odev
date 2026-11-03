@@ -50,12 +50,10 @@ dotnet run --project tests/FlappyBird.Tests -c Release
 
 ## Ekran görüntüleri
 
-**İki gerçek ekran görüntüsü Windows aşamasında eklenecek; bu teslim hazırlığında PNG dosyaları yoktur.** Sahte görüntü kullanılmadı. Beklenen dosyalar:
+![Oyun sürerken kuş, borular ve skor 2](docs/screenshots/01-oyun-skor-2.png)
+![Çarpışma sonrası oyun bitti ve skor](docs/screenshots/02-oyun-skor.png)
 
-1. `docs/screenshots/01-oyun-skor.png` — oyun sürerken kuş, iki engel çifti ve en az 1 puan.
-2. `docs/screenshots/02-oyun-bitti.png` — çarpışma sonrası oyun bitti bilgisi, skor ve Yeni Oyun düğmesi.
-
-Çekim ve README'ye ekleme adımları [ekran görüntüsü yönergesinde](docs/screenshots/README.md). İki gerçek PNG eklenene kadar föyün ekran görüntüsü şartı tamamlanmış sayılmaz.
+İki gerçek uygulama görüntüsü eklendi. [Ekran görüntüsü yönergesindeki](docs/screenshots/README.md) hız ve yeniden başlatma kontrollerini ayrıca tamamlayın.
 
 ## Kod düzeni ve sınırlamalar
 

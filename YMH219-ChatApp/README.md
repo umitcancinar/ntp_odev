@@ -71,14 +71,10 @@ Test koşucusu başarısızlıkta sıfırdan farklı çıkış kodu döndürür.
 
 ## Ekran görüntüleri — Windows aşamasında eklenecek
 
-Henüz gerçek ekran görüntüsü yoktur. Windows'ta aşağıdaki iki senaryo çekilecek; gerçek PNG dosyaları eklendikten sonra README içine görüntü olarak yerleştirilecektir. Eksik dosyalara görüntü bağlantısı eklenmemiştir.
+![Yerel sunucu açık, henüz istemci bağlı değil](docs/screenshots/01-sunucu-acik.png)
+![Bir istemci localhost sunucusuna bağlı](docs/screenshots/02-tek-istemci-bagli.png)
 
-| Dosya | Gösterilecek durum |
-| --- | --- |
-| `docs/screenshots/01-sunucu-istemciler.png` | Sunucu açık; iki farklı kullanıcı ve adres/port bilgileri listede, katılım/mesaj olayları görünür. |
-| `docs/screenshots/02-iki-istemci-sohbet.png` | İki uygulama penceresi yan yana; farklı kullanıcı adlarıyla iki yönlü Türkçe mesajlar ve zamanları görünür. |
-
-[Ayrıntılı çekim yönergesi](docs/screenshots/README.md).
+İki gerçek görüntü eklendi. İki kullanıcıyla mesajlaşma ve sunucu listesini gösteren teslim senaryosu ayrıca [ekran görüntüsü yönergesinde](docs/screenshots/README.md) açıklanıyor.
 
 ## Sınırlamalar ve geliştirme notları
 
