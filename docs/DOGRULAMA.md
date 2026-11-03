@@ -7,7 +7,8 @@ Tarih: 3 Kasım 2026. Ortam: macOS; .NET 10 SDK ile Windows hedefli çapraz derl
 - İlk test koşumu: başlangıç API gövdelerinde 10/10 test eksik TCP davranışı nedeniyle `NotImplementedException` ile başarısız oldu (RED).
 - Uygulama sonrasında bozuk/aşırı uzun veri testleri `InvalidDataException` yakalanmadığını gösterdi; beklenen bağlantı hata kapsamına eklenerek düzeltildi.
 - Ana davranışlar 10/10 geçti. Yoğun trafik sırasında katılma entegrasyon kontrolü de eklendi.
-- Son `dotnet run --project tests/ChatApp.Tests/ChatApp.Tests.csproj -c Release`: **11/11 geçti, 0 başarısız**.
+- Son gözden geçirmede okumayı durduran gerçek TCP sunucusu testi eklendi: önce `TimeoutException` ile RED; istemci yazmasına 3 saniyelik süre sınırı eklenince GREEN. Böylece form kapanışı, durmuş bir sunucuya yazmayı süresiz beklemez.
+- Son `dotnet run --project tests/ChatApp.Tests/ChatApp.Tests.csproj -c Release`: **12/12 geçti, 0 başarısız**.
 - Son `dotnet build ChatApp.sln -c Release`: **0 uyarı, 0 hata**.
 - Ek gözden geçirme: el sıkışma onayı gönderilmeden istemci yayın listesine eklenmemesi; görevlerin saklanması/beklenmesi; tüm protokol okuma döngülerinde uzunluk sınırı; UI kapanışında devam eden işlem kapılarının beklenmesi kontrol edildi.
 

@@ -13,7 +13,7 @@
 
 1. Kullanıcı `Gönder` düğmesine basar veya Ctrl+Enter yapar.
 2. `MainForm.SendMessageAsync` → `ChatClient.SendAsync`; metin doğrulanır.
-3. `JsonLineConnection.WriteAsync`, JSON + satır sonunu UTF-8 olarak TCP akışına yazar. `SemaphoreSlim` aynı bağlantıya eşzamanlı yazıları sıralar.
+3. `JsonLineConnection.WriteAsync`, JSON + satır sonunu UTF-8 olarak TCP akışına yazar. `SemaphoreSlim` aynı bağlantıya eşzamanlı yazıları sıralar. Gönderme 3 saniyede tamamlanmazsa iptal edilir ve bağlantı kapatılır.
 4. Sunucuda `ServeAsync` tam satırı okur, paketin türünü ve mesajını kontrol eder. Kullanıcı adını gelen `message` paketinden almaz; katılımda doğrulanan adı kullanır. Zamanı sunucu belirler.
 5. `BroadcastAsync`, tüm katılmış istemcilere aynı paketi gönderir. Gönderene de dönmesi, mesajın sunucuya ulaştığını gösterir.
 6. İstemcinin `ReceiveAsync` olayı tetikler. Form `BeginInvoke` ile UI iş parçacığına geçer ve zamanı yerel saatle `HH:mm:ss` olarak gösterir.

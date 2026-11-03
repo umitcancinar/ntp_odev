@@ -42,7 +42,9 @@ public sealed class ChatClient : IAsyncDisposable
         text = ChatRules.Message(text);
         var active = wire;
         if (!connected || active == null || lifetime == null) throw new InvalidOperationException("Sunucuya bağlı değilsiniz.");
-        try { await active.WriteAsync(new ChatPacket("message", Text: text), lifetime.Token).ConfigureAwait(false); }
+        using var timeout = CancellationTokenSource.CreateLinkedTokenSource(lifetime.Token);
+        timeout.CancelAfter(TimeSpan.FromSeconds(3));
+        try { await active.WriteAsync(new ChatPacket("message", Text: text), timeout.Token).ConfigureAwait(false); }
         catch { active.Dispose(); throw; }
     }
 

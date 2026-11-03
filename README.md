@@ -55,7 +55,7 @@ Windows Güvenlik Duvarı sorarsa yalnızca güvendiğiniz **özel ağ** için i
 - Sunucuda kullanıcı adı ve uzak adres/port listesi; katılım/ayrılma olayları.
 - İstemcide odadaki kullanıcıların görünmesi; bağlantı hatası sonrası yeniden bağlanma.
 - Asenkron okuma/yazma, her bağlantıda sıralı yazma, en fazla 16.384 bayt protokol satırı.
-- Katılımda 10 saniye, istemci bağlantısında 6 saniye, sunucu yayın yazmasında 3 saniye zaman aşımı.
+- Katılımda 10 saniye, istemci bağlantısında 6 saniye, istemci/sunucu mesaj yazmasında 3 saniye zaman aşımı.
 - Sunucu dururken yarım protokol verisi gönderen bağlantıların da kapatılması.
 - Segoe UI, DPI ölçekleme, yeniden boyutlanabilen form, klavye erişimi ve metinsel durumlar.
 
@@ -65,7 +65,7 @@ Windows Güvenlik Duvarı sorarsa yalnızca güvendiğiniz **özel ağ** için i
 dotnet run --project tests/ChatApp.Tests/ChatApp.Tests.csproj -c Release
 ```
 
-Test koşucusu başarısızlıkta sıfırdan farklı çıkış kodu döndürür. 11 senaryo; iki gerçek istemci, Türkçe/emoji, zaman damgası, liste ve ayrılma, sunucu yeniden başlatma, reddedilen bağlantı, girdi doğrulama, bozuk/aşırı uzun protokol, eşzamanlı mesajlar, yarım satırda kapanış ve yoğun akışta katılmayı kapsar. Portlar işletim sisteminden dinamik alınır.
+Test koşucusu başarısızlıkta sıfırdan farklı çıkış kodu döndürür. 12 senaryo; iki gerçek istemci, Türkçe/emoji, zaman damgası, liste ve ayrılma, sunucu yeniden başlatma, reddedilen bağlantı, girdi doğrulama, bozuk/aşırı uzun protokol, eşzamanlı mesajlar, yarım satırda kapanış ve yoğun akışta katılmayı ve okumayan sunucuda gönderme zaman aşımını kapsar. Portlar işletim sisteminden dinamik alınır.
 
 macOS üzerinde çekirdek testleri çalıştırılmış ve Windows hedefli Release derlemesi yapılmıştır. **Windows arayüzü henüz çalıştırılmadı; bu derleme çalışan Windows ekranı kanıtı değildir.** Gerçek çalışma ve ekran görüntüsü kontrolleri [Windows kontrol listesinde](docs/WINDOWS-KONTROL.md) beklemektedir. [Doğrulama kaydı](docs/DOGRULAMA.md) uygulanan kontrolleri belirtir.
 

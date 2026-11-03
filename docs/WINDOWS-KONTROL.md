@@ -9,7 +9,7 @@ Tarih, Windows/.NET sürümü ve sonuçları gerçek denemeden sonra doldurun. B
 ## Derleme ve başlangıç
 
 - [ ] Depoyu yeni bir klasöre kopyalayıp `dotnet build ChatApp.sln -c Release` çalıştır; hatasız bitişi kaydet.
-- [ ] `dotnet run --project tests/ChatApp.Tests -c Release`: 11/11 geçmeli, çıkış kodu 0 olmalı.
+- [ ] `dotnet run --project tests/ChatApp.Tests -c Release`: 12/12 geçmeli, çıkış kodu 0 olmalı.
 - [ ] Uygulamayı iki kez aç; Sunucu/İstemci sekmeleri, Türkçe metinler, başlangıçtaki kapalı/bağlı değil durumları doğru olsun.
 - [ ] Formu minimum boyuta indir, büyüt; %100 / %150 / %200 ölçeklemede metin ve düğmeler kesilmesin. Sekme, Tab ve Alt kısayollarıyla odak görünür olsun.
 

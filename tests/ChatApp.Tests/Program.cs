@@ -16,7 +16,8 @@ var tests = new (string Name, Func<Task> Run)[] {
  ("Eşzamanlı mesajlar birbirine karışmaz", ConcurrentMessages),
  ("Yarım çerçeve sunucu durmasını engellemez", PartialShutdown),
  ("Tekrarlanan bağlantı ve ayrılma kaynakları bırakır", RepeatedSessions),
- ("Yoğun mesaj akışında yeni kullanıcı el sıkışması", JoinDuringTraffic)
+ ("Yoğun mesaj akışında yeni kullanıcı el sıkışması", JoinDuringTraffic),
+ ("Okumayan sunucuya gönderme zaman aşımıyla sonlanır", StalledServer)
 };
 int failures = 0;
 foreach (var test in tests) {
@@ -120,4 +121,26 @@ static async Task JoinDuringTraffic() {
    await using var c = new ChatClient(); await c.ConnectAsync("localhost", s.Port, $"kişi{i}"); Check(c.IsConnected, "Katılım sırasında bağlantı kapandı");
  }).ToArray();
  await Task.WhenAll(joins.Append(traffic));
+}
+
+static async Task StalledServer() {
+ var listener = new TcpListener(IPAddress.Loopback, 0); listener.Start();
+ try {
+  var accepted = listener.AcceptTcpClientAsync();
+  await using var client = new ChatClient();
+  var connecting = client.ConnectAsync("127.0.0.1", ((IPEndPoint)listener.LocalEndpoint).Port, "Ali");
+  using var raw = await accepted; raw.ReceiveBufferSize = 1024;
+  using var reader = new StreamReader(raw.GetStream(), Encoding.UTF8, leaveOpen: true);
+  await reader.ReadLineAsync();
+  await raw.GetStream().WriteAsync(Encoding.UTF8.GetBytes("{\"Type\":\"welcome\"}\n"));
+  await connecting;
+  var sending = Task.Run(async () => { for (int i = 0; i < 5000; i++) await client.SendAsync(new string('ç', 2000)); });
+  try {
+   try { await sending.WaitAsync(TimeSpan.FromSeconds(6)); throw new Exception("Okumayan sunucuya sınırsız veri gönderildi"); }
+   catch (OperationCanceledException) { }
+  } finally {
+   await client.DisconnectAsync();
+   try { await sending; } catch (Exception ex) when (ex is OperationCanceledException or IOException or ObjectDisposedException) { }
+  }
+ } finally { listener.Stop(); }
 }
