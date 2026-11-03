@@ -15,7 +15,8 @@ var tests = new (string Name, Func<Task> Run)[] {
  ("Aşırı uzun çerçeve bağlantıyı kapatır", Oversized),
  ("Eşzamanlı mesajlar birbirine karışmaz", ConcurrentMessages),
  ("Yarım çerçeve sunucu durmasını engellemez", PartialShutdown),
- ("Tekrarlanan bağlantı ve ayrılma kaynakları bırakır", RepeatedSessions)
+ ("Tekrarlanan bağlantı ve ayrılma kaynakları bırakır", RepeatedSessions),
+ ("Yoğun mesaj akışında yeni kullanıcı el sıkışması", JoinDuringTraffic)
 };
 int failures = 0;
 foreach (var test in tests) {
@@ -109,4 +110,14 @@ static async Task PartialShutdown() {
 static async Task RepeatedSessions() {
  await using var s = new ChatServer(); s.Start(0); await using var a = new ChatClient();
  for (int i = 0; i < 5; i++) { await a.ConnectAsync("localhost", s.Port, "Ali"); await a.DisconnectAsync(); await Until(() => s.Clients.Count == 0); }
+}
+
+static async Task JoinDuringTraffic() {
+ await using var s = new ChatServer(); s.Start(0); await using var sender = new ChatClient();
+ await sender.ConnectAsync("localhost", s.Port, "Gönderen");
+ var traffic = Task.Run(async () => { for (int i = 0; i < 500; i++) await sender.SendAsync("akış"); });
+ var joins = Enumerable.Range(0, 20).Select(async i => {
+   await using var c = new ChatClient(); await c.ConnectAsync("localhost", s.Port, $"kişi{i}"); Check(c.IsConnected, "Katılım sırasında bağlantı kapandı");
+ }).ToArray();
+ await Task.WhenAll(joins.Append(traffic));
 }
