@@ -2,8 +2,8 @@
 
 Windows Forms üzerinde iki engel çiftinden kaçılarak puan toplanan, sınıflara ayrılmış masaüstü oyunu. Nesne Tabanlı Programlama (YMH 219) ödevi.
 
-**Öğrenci:** [AD SOYAD]  
-**Öğrenci numarası:** [NUMARA]
+**Öğrenci:** Ümitcan Çinar
+**Öğrenci numarası:** 250541009
 
 ## Teknolojiler
 
@@ -46,7 +46,7 @@ dotnet run --project tests/FlappyBird.Tests -c Release
 
 Çerçevesiz konsol çalıştırıcısı **13 davranış testi** içerir; başarısızlıkta sıfırdan farklı çıkış kodu üretir. Fizik, çarpışma, skorun tek sayılması, engel geri dönüşümü, tuş tekrarı, oyun sonu, sıfırlama ve geçersiz zaman adımı sınanır.
 
-3 Kasım 2026 macOS doğrulaması: Release çözüm derlemesi **0 uyarı / 0 hata**, testler **13/13 başarılı**. Windows Forms penceresi macOS'ta çalıştırılamaz; gerçek Windows çalıştırması henüz doğrulanmadı. [Windows kontrol listesi](docs/WINDOWS-TEST.md) akşam tamamlanacaktır.
+3 Kasım 2026 Windows x64 doğrulaması: .NET SDK 10.0.403 ile Release derlemesi **0 uyarı / 0 hata**, davranış testleri **13/13 başarılı**. Pencere açılışı yapıldı; klavye, odak, DPI ve ekran görüntüsü senaryolarının etkileşimli kontrolü bekliyor.
 
 ## Ekran görüntüleri
 
@@ -61,4 +61,4 @@ dotnet run --project tests/FlappyBird.Tests -c Release
 
 `src/FlappyBird`: Form, çizim kontrolü ve giriş noktası. `src/FlappyBird.Core`: Bird, PipePair, GameSession. `tests/FlappyBird.Tests`: Konsol davranış testleri. [Sözlü sınav için kod rehberi](KOD-REHBERI.md), [geliştirme kaydı](docs/GELISTIRME.md).
 
-Çarpışma hesabı kuşun dikdörtgen sınırlarını kullanır; çizilen kuş elipstir. En yüksek skor dosyaya yazılmaz. Fizik sabit dünya koordinatlarında işler; uzun bir arayüz takılmasında zaman adımı 250 ms ile sınırlanır. Windows'ta DPI, odak, tuş olayları ve çizimin akıcılığı kontrol edilmelidir. GitHub uzak deposu henüz oluşturulmadı; öğrenci bilgileri doldurulacak.
+Çarpışma hesabı kuşun dikdörtgen sınırlarını kullanır; çizilen kuş elipstir. En yüksek skor dosyaya yazılmaz. Fizik sabit dünya koordinatlarında işler; uzun bir arayüz takılmasında zaman adımı 250 ms ile sınırlanır. Windows'ta DPI, odak, tuş olayları ve çizimin akıcılığı kontrol edilmelidir. Beş ayrı teslim deposuna aktarım daha sonra yapılacak.

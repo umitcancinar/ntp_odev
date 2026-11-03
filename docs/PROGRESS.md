@@ -18,3 +18,6 @@ Final: minor fixed — Face README eğitim düğmesi davranışı açıklaması 
 Final: minor fixed — Windows menüsü K SDK yanında kaynak yollarını da denetliyor; gerçek PowerShell kontrolü geçti.
 Final: Ruling — SDK denetiminde .NET 10 SDK aranması korundu; sadece SDK11 kurulu olması .NET10 hedef çalışma zamanının varlığını garanti etmez. Hazır EXE'ler için SDK gerekmiyor.
 Windows UI/hardware ve screenshot gate: Kullanıcı tarafından akşama ertelendi; başarı iddiası yapılmadı.
+
+## Windows aşaması — 3 Kasım 2026
+Beş Release derleme: 0 uyarı / 0 hata. Davranış testleri: 70/70. OpenCV, LBPH native çağrıları, SAPI ses üretimi/tanıma, kamera kare alma ve mikrofon girişi geçti. Gerçek kişi eğitimi ve mikrofon diktesi tamamlanmadı. Öğrenci bilgileri dolduruldu. Ayrıntılar: [Windows doğrulaması](WINDOWS-DOGRULAMA.md). Arayüz denetim erişimi ve GitHub kimlik doğrulaması bekliyor; beş ayrı depo kullanıcıya bırakıldı.

@@ -2,8 +2,8 @@
 
 Kendi Windows Forms penceresindeki klavye olaylarını zaman damgasıyla gösteren eğitsel uygulama. Nesne Tabanlı Programlama (YMH 219) ödevi.
 
-**Öğrenci:** [AD SOYAD]  
-**Öğrenci numarası:** [NUMARA]
+**Öğrenci:** Ümitcan Çinar
+**Öğrenci numarası:** 250541009
 
 ## Teknolojiler
 
@@ -50,7 +50,7 @@ dotnet run --project tests/KeyEventLogger.Tests -c Release
 
 Çerçevesiz konsol çalıştırıcısı **10 davranış testi** içerir: durdurulmuş kayıt, üç olay türü, başlat/durdur/temizle, parola alanı engeli, Türkçe UTF-8 dışa aktarımı, gerçek dosya hatası, kontrol karakterlerinin tek satır gösterimi, kayıt sınırı ve boş olay bilgisi.
 
-3 Kasım 2026 macOS doğrulaması: Release çözüm derlemesi **0 uyarı / 0 hata**, testler **10/10 başarılı**. Windows Forms penceresi macOS'ta çalışmaz; gerçek Windows klavye/odak/dosya iletişim kutusu kontrolü henüz yapılmadı. [Windows kontrol listesi](docs/WINDOWS-TEST.md) akşam tamamlanacaktır.
+3 Kasım 2026 Windows x64 doğrulaması: .NET SDK 10.0.403 ile Release derlemesi **0 uyarı / 0 hata**, davranış testleri **10/10 başarılı**. Pencere açılışı yapıldı; klavye, odak, DPI ve ekran görüntüsü senaryolarının etkileşimli kontrolü bekliyor.
 
 ## Ekran görüntüleri
 
@@ -65,4 +65,4 @@ dotnet run --project tests/KeyEventLogger.Tests -c Release
 
 `src/KeyEventLogger`: form ve giriş noktası. `src/KeyEventLogger.Core`: `LogSession`, `KeyLogEntry`, olay türü. `tests/KeyEventLogger.Tests`: gerçek davranış testleri. [Sözlü kod rehberi](KOD-REHBERI.md), [geliştirme kaydı](docs/GELISTIRME.md).
 
-Bazı gezinme/kısayol tuşları odaktaki Windows kontrolü tarafından işlenebilir; KeyPress her fiziksel tuş için üretilmez. Uzun basış tekrarlanan KeyDown/KeyPress olayları üretir; bunlar bu ödevde olay olarak gösterilir. IME ve birleşik karakterlerin olay dizisi klavye düzenine göre değişebilir. Windows DPI, sekme sırası ve dosya izinleri kontrolü bekliyor. Öğrenci bilgileri ve GitHub uzak deposu daha sonra tamamlanacak.
+Bazı gezinme/kısayol tuşları odaktaki Windows kontrolü tarafından işlenebilir; KeyPress her fiziksel tuş için üretilmez. Uzun basış tekrarlanan KeyDown/KeyPress olayları üretir; bunlar bu ödevde olay olarak gösterilir. IME ve birleşik karakterlerin olay dizisi klavye düzenine göre değişebilir. Windows DPI, sekme sırası ve dosya izinleri kontrolü bekliyor. Beş ayrı teslim deposuna aktarım daha sonra yapılacak.

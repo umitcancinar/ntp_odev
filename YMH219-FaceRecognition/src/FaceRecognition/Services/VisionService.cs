@@ -57,9 +57,9 @@ public sealed class VisionService : IDisposable
         catch { normalized.Dispose(); throw; }
     }
 
-    public void Train(Dictionary<string, string[]> samples)
+    public void Train(Dictionary<string, string[]> samples, bool ownFaceOnly = false)
     {
-        string? error = TrainingRules.ValidateTraining(samples.ToDictionary(p => p.Key, p => p.Value.Length));
+        string? error = TrainingRules.ValidateTraining(samples.ToDictionary(p => p.Key, p => p.Value.Length), ownFaceOnly);
         if (error is not null) throw new InvalidOperationException(error);
         string[] labels = samples.Keys.Order(StringComparer.OrdinalIgnoreCase).ToArray();
         var images = new List<Mat>();

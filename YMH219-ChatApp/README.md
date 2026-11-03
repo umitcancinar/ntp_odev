@@ -2,8 +2,8 @@
 
 Windows Forms üzerinde TCP ile kullanıcı adları ve zaman damgalı mesajlar paylaşan ders projesi. Bir uygulamada **Sunucu** ve **İstemci** sekmeleri vardır; birden fazla uygulama örneği aynı odaya bağlanabilir.
 
-**Öğrenci adı-soyadı:** [DOLDURULACAK]  
-**Öğrenci numarası:** [DOLDURULACAK]  
+**Öğrenci adı-soyadı:** Ümitcan Çinar
+**Öğrenci numarası:** 250541009
 **Ders:** Nesne Tabanlı Programlama — YMH219
 
 ## Teknolojiler ve yapı
@@ -67,7 +67,7 @@ dotnet run --project tests/ChatApp.Tests/ChatApp.Tests.csproj -c Release
 
 Test koşucusu başarısızlıkta sıfırdan farklı çıkış kodu döndürür. 12 senaryo; iki gerçek istemci, Türkçe/emoji, zaman damgası, liste ve ayrılma, sunucu yeniden başlatma, reddedilen bağlantı, girdi doğrulama, bozuk/aşırı uzun protokol, eşzamanlı mesajlar, yarım satırda kapanış ve yoğun akışta katılmayı ve okumayan sunucuda gönderme zaman aşımını kapsar. Portlar işletim sisteminden dinamik alınır.
 
-macOS üzerinde çekirdek testleri çalıştırılmış ve Windows hedefli Release derlemesi yapılmıştır. **Windows arayüzü henüz çalıştırılmadı; bu derleme çalışan Windows ekranı kanıtı değildir.** Gerçek çalışma ve ekran görüntüsü kontrolleri [Windows kontrol listesinde](docs/WINDOWS-KONTROL.md) beklemektedir. [Doğrulama kaydı](docs/DOGRULAMA.md) uygulanan kontrolleri belirtir.
+3 Kasım 2026 Windows x64 doğrulaması: .NET SDK 10.0.403 ile Release derlemesi **0 uyarı / 0 hata**, davranış testleri **12/12 başarılı**. Testlerde gerçek localhost TCP bağlantıları kullanıldı. İki form ile görsel mesajlaşma ve ekran görüntüsü kontrolü bekliyor.
 
 ## Ekran görüntüleri — Windows aşamasında eklenecek
 
@@ -86,4 +86,4 @@ Bu eğitim uygulaması güvenilir localhost/yerel ağ içindir. TCP içeriği ş
 
 Örnekler birbirinden bağımsızdır: ilk penceredeki sunucuyu kapatmak o sunucuya bağlı herkesin bağlantısını keser. Tekrar bağlanma kullanıcı tarafından **Bağlan** ile yapılır; otomatik yeniden gönderim yoktur. Uygulama Windows gerektirir; macOS üzerinde Windows Forms çalıştırılamaz.
 
-[Kod ve sözlü kontrol rehberi](KOD-REHBERI.md). GitHub yayını, öğrenci bilgileri ve iki gerçek ekran görüntüsü teslimden önce tamamlanmalıdır.
+[Kod ve sözlü kontrol rehberi](KOD-REHBERI.md). GitHub yayını ve iki gerçek ekran görüntüsü teslimden önce tamamlanmalıdır.

@@ -2,8 +2,8 @@
 
 C# Windows Forms uygulaması kameradaki veya seçilen dosyadaki yüzleri Haar cascade ile bulur ve dikdörtgenlerle işaretler. Kullanıcının kendi oluşturduğu gönüllü yerel örnekler üzerinde LBPH ile basit etiket tahmini yapar.
 
-**Öğrenci adı soyadı:** DOLDURULACAK  
-**Öğrenci numarası:** DOLDURULACAK
+**Öğrenci adı soyadı:** Ümitcan Çinar
+**Öğrenci numarası:** 250541009
 
 ## Teknolojiler
 - .NET 10 SDK, C#, Windows Forms; Windows 10/11 **x64**.
@@ -24,11 +24,11 @@ dotnet run --project src/FaceRecognition -c Release
 
 Visual Studio'da `FaceRecognition.sln` açılır; `FaceRecognition` başlangıç projesi seçilip F5 yapılır. NuGet geri yüklemesi ilk kurulumda internet ister. Algılama XML'i derleme çıktısına otomatik kopyalanır.
 
-## Kullanım ve iki etiket demonstrasyonu
+## Kullanım ve yerel tanıma
 1. **Görüntü Seç** ile kendi fotoğrafınızı açın veya kamera numarasını seçip **Kamerayı Başlat** yapın. Windows Ayarlar → Gizlilik ve güvenlik → Kamera → masaüstü uygulamaları iznini kontrol edin.
 2. Tam olarak **bir yüz** görünürken bir takma etiket yazın (ör. `Kişi A`), gönüllü kullanım kutusunu işaretleyin ve **Yüzü Örnek Olarak Kaydet** yapın. Kayıt kamera akışını durdurur; farklı örnek için yeniden başlatın veya başka dosya seçin.
-3. Aynı etiket için en az **3 farklı örnek**, tercihen farklı aydınlatma ve küçük açılarla **5–10 örnek** ekleyin. İkinci gönüllü için `Kişi B` etiketiyle tekrarlayın. Föydeki alternatif kullanılırsa kendi yüzünüzün iki farklı örnek sınıfını açık adlarla etiketleyin; bu, iki kişiyi ayırt ettiğini kanıtlamaz.
-4. **Örneklerle Eğit** yapın. Eğitim en az iki etikette üçer geçerli örnek gerektirir; eksik veri varsa uyarı gösterilir ve eğitim yapılmaz.
+3. Aynı etiket için en az **3 farklı örnek**, tercihen farklı aydınlatma ve küçük açılarla **5–10 örnek** ekleyin. İkinci gönüllü için `Kişi B` etiketiyle tekrarlayın. Föydeki kendi yüzünüzü kullanma alternatifi için tek etikette farklı örnekler ekleyip **Yalnızca kendi yüzümle çalışıyorum** kutusunu seçin. Bu seçenek kişiler arası ayırımı ölçmez.
+4. **Örneklerle Eğit** yapın. Normal eğitim en az iki etikette üçer örnek gerektirir. Kendi yüzüm seçeneğinde tam bir etiket ve en az üç örnek gerekir. Eksik veri varsa eğitim yapılmaz.
 5. Eğitimde kullanmadığınız bir görüntü seçin veya kamerayı yeniden başlatın. Her yüzün etiketi ve **LBPH uzaklığı** gösterilir. Düşük uzaklık daha benzerdir; değer güven yüzdesi değildir. Varsayılan eşik **70** üzerindeyse `Bilinmeyen` gösterilir. Bu eşik küçük veri kümenize göre ayarlanmalıdır.
 6. Sonradan örnek eklediyseniz yeniden eğitin. Model uygulama kapanınca silinir; örnekler kalır, sonraki açılışta yeniden eğitim yapabilirsiniz.
 
@@ -45,15 +45,15 @@ Visual Studio'da `FaceRecognition.sln` açılır; `FaceRecognition` başlangıç
 dotnet run --project tests/FaceRecognition.Tests -c Release
 ```
 
-Bu komut platformdan bağımsız davranış testlerini çalıştırır; klasik `dotnet test` projesi değildir. Etiket güvenliği, minimum eğitim verisi, eşik ve geçersiz skorlar kontrol edilir. Windows hedefli Release derleme ve **15 davranış testi** macOS üzerinde doğrulandı. **Windows arayüzü, gerçek kamera ve gerçek gönüllü örneklerle LBPH başarımı henüz test edilmedi.** Ayrıntılı manuel kontrol: [docs/WINDOWS-KONTROL.md](docs/WINDOWS-KONTROL.md).
+3 Kasım 2026 Windows x64 doğrulaması: .NET SDK 10.0.403 ile Release derlemesi **0 uyarı / 0 hata**, davranış testleri **18/18 başarılı**. OpenCV 4.13.0, cascade yükleme, boş karede algılama, sentetik veride LBPH eğitim/tahmin ve kameradan 640×480 kare alma başarılı. Gerçek yüz denemesinde yüz bulunamadı; yerel kişi tanıma ve arayüz senaryosu henüz doğrulanmadı.
 
 ## Ekran görüntüleri — Windows aşamasında eklenecek
 Föyün istediği iki gerçek uygulama ekran görüntüsü henüz alınmadı. [Çekim yönergesi](docs/screenshots/README.md) tamamlandıktan sonra README'ye şu iki dosyanın görsel bağlantısını ekleyin:
 
 1. `docs/screenshots/01-yuz-algilama.png` — uygulama içinde dikdörtgenle işaretlenen yüz.
-2. `docs/screenshots/02-yerel-tanima.png` — en az iki etiketle eğitim sonrası test yüzü, tahmin ve uzaklık.
+2. `docs/screenshots/02-yerel-tanima.png` — iki etiketle veya kendi yüzüm seçeneğiyle eğitim sonrası yeni test yüzü, tahmin ve uzaklık.
 
 ## Bilinen sınırlamalar ve geliştirme notları
-Önden bakan yüzler için eğitim amaçlı küçük veri kümesi demonstrasyonudur; güvenilir kimlik doğrulama sistemi değildir. Işık, poz, gözlük ve az veri sonucu etkiler. Büyük/kalabalık görüntüler ve kamera sürücüleri Windows denemesi gerektirir. Windows ARM64 yerel OpenCV dağıtımı bu projede hedeflenmemiştir; x64 Windows kullanın. Gerçek ekran görüntüleri, öğrenci bilgileri ve yerel iki etiket demonstrasyonu tamamlanmadan teslim hazır sayılmaz.
+Önden bakan yüzler için eğitim amaçlı küçük veri kümesi demonstrasyonudur; güvenilir kimlik doğrulama sistemi değildir. Işık, poz, gözlük ve az veri sonucu etkiler. Büyük/kalabalık görüntüler ve kamera sürücüleri Windows denemesi gerektirir. Windows ARM64 yerel OpenCV dağıtımı bu projede hedeflenmemiştir; x64 Windows kullanın. Gerçek ekran görüntüleri ve yerel tanıma gösterimi tamamlanmalıdır.
 
 Kodun sözlü açıklaması: [KOD-REHBERI.md](KOD-REHBERI.md). Model kaynak ve lisansı: [THIRD-PARTY-NOTICES.md](THIRD-PARTY-NOTICES.md).

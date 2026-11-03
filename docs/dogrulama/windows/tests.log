@@ -1,0 +1,75 @@
+PASS Yerçekimi kuşu aşağı hızlandırır
+PASS Zıplama yukarı hız verir
+PASS Boru sola hareket eder
+PASS Geçiş skoru yalnızca bir kez alınır
+PASS Yeniden kullanılan boru tekrar skor verir
+PASS Boşlukta çarpışma yoktur
+PASS Üst ve alt borular çarpışır
+PASS Yatayda ayrık nesneler çarpışmaz
+PASS Basılı tutma tekrar zıplatmaz
+PASS Zemin çarpışması oyunu durdurur
+PASS Yeniden başlatma fizik skor ve tuş durumunu sıfırlar
+PASS Geçersiz zaman adımı reddedilir
+PASS Oyun oturumu geçişleri sayar ve boruları yeniden kullanır
+13/13 başarılı
+PASS Durdurulmuş oturum kayıt almaz
+PASS Başlat üç olay türünü zaman damgasıyla saklar
+PASS Durdur yeni kaydı engeller eski kaydı korur
+PASS Temizle kayıtları siler oturum durumunu korur
+PASS Parola alanı odaktayken olay kaydedilmez
+PASS UTF8 dosyası Türkçe karakter ve olay bilgisini korur
+PASS Dosya hatası çağırana bildirilir ve kayıtlar korunur
+PASS Kontrol karakterleri tek satırda okunur
+PASS Kayıt sınırında oturum durur ve eski kayıtlar korunur
+PASS Boş kayıt açıklaması reddedilir
+10/10 başarılı
+PASS İki kullanıcı ve zaman damgalı UTF-8 mesaj
+PASS İstemci listesi ve ayrılma
+PASS Sunucu durunca istemci kapanır ve tekrar bağlanır
+PASS Reddedilen bağlantıdan sonra yeniden bağlanır
+PASS Boş kullanıcı ve boş/uzun mesaj reddedilir
+PASS Bozuk JSON bağlantıyı kapatır, sunucu çalışır
+PASS Aşırı uzun çerçeve bağlantıyı kapatır
+PASS Eşzamanlı mesajlar birbirine karışmaz
+PASS Yarım çerçeve sunucu durmasını engellemez
+PASS Tekrarlanan bağlantı ve ayrılma kaynakları bırakır
+PASS Yoğun mesaj akışında yeni kullanıcı el sıkışması
+PASS Okumayan sunucuya gönderme zaman aşımıyla sonlanır
+12/12 geçti; 0 başarısız.
+PASS Boş ve yalnız boşluk metni reddedilir
+PASS Türkçe metin korunur ve kenar boşluğu temizlenir
+PASS Tam sınırdaki metin kabul edilir
+PASS Sınırı aşan metin reddedilir
+PASS Kurulu olmayan dil için hayali tanıyıcı oluşturulmaz
+PASS Kurulu tam dil eşleşmesi önceliklidir
+PASS Aynı dilin kurulu lehçesi seçilebilir
+PASS Tercih edilen dil yoksa gerçek kurulu ilk seçenek döner
+PASS Okuma sürerken dinleme ve ikinci okuma başlatılamaz
+PASS Dinleme sürerken sesli okuma başlatılamaz
+PASS Duraklatma ve devam doğru sırada çalışır
+PASS İptal tamamlanana kadar yeni iş başlatılamaz
+PASS Duraklatılmış okuma durdurulabilir
+PASS Dinleme iptali bitene kadar mikrofon yeniden açılamaz
+PASS Eski okuma bitişi etkin dinlemeyi etkilemez
+PASS Eski dinleme bitişi etkin okumayı etkilemez
+PASS Tamamlanan işler yeniden başlatılabilir
+17/17 başarılı; 0 başarısız.
+PASS Türkçe etiket korunur, dış boşluklar temizlenir
+PASS Boş etiket reddedilir
+PASS Dizin geçişi reddedilir
+PASS Windows aygıt adı reddedilir
+PASS Çok uzun etiket reddedilir
+PASS Sıfır etiket ile eğitim engellenir
+PASS Tek etiket ile eğitim engellenir
+PASS Kendi yüzüm seçeneği tek etikette farklı örnekleri kabul eder
+PASS Kendi yüzüm seçeneği eksik örnekleri kabul etmez
+PASS Kendi yüzüm seçeneği sıfır veya birden fazla etiketi kabul etmez
+PASS Az örnekli ikinci etiket eğitimi engeller
+PASS İki etiket ve üçer örnek ile eğitim açılır
+PASS Eşik altındaki geçerli etiket kabul edilir
+PASS Eşik sınırı kabul edilir
+PASS Eşiğin üstü bilinmeyendir
+PASS OpenCV bilinmeyen etiketi reddedilir
+PASS Geçersiz sayısal skor kabul edilmez
+PASS Negatif skor ve eşik reddedilir
+18/18 passed

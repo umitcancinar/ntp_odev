@@ -15,9 +15,10 @@ public static class TrainingRules
         return value;
     }
 
-    public static string? ValidateTraining(IReadOnlyDictionary<string, int> counts)
+    public static string? ValidateTraining(IReadOnlyDictionary<string, int> counts, bool ownFaceOnly = false)
     {
-        if (counts.Count < 2) return "Eğitim için en az iki farklı etiket ekleyin.";
+        if (ownFaceOnly && counts.Count != 1) return "Kendi yüzüm çalışmasında yalnızca bir etiket kullanın.";
+        if (!ownFaceOnly && counts.Count < 2) return "Eğitim için en az iki farklı etiket ekleyin veya kendi yüzüm seçeneğini kullanın.";
         if (counts.Any(pair => pair.Value < 3)) return "Her etiket için en az üç yüz örneği ekleyin (beş veya daha fazla önerilir).";
         return null;
     }

@@ -2,8 +2,8 @@
 
 Windows Forms üzerinde metni sesli okutan ve mikrofon konuşmasını metne dönüştüren, bağımsız C# masaüstü uygulaması. Nesne Tabanlı Programlama (YMH219) ek uygulama ödevidir.
 
-- **Öğrenci adı-soyadı:** [DOLDURULACAK]
-- **Öğrenci numarası:** [DOLDURULACAK]
+- **Öğrenci adı-soyadı:** Ümitcan Çinar
+- **Öğrenci numarası:** 250541009
 - **Teslim:** Kendi hesabınızda `YMH219-SpeechApp` adlı ayrı public GitHub deposu.
 
 ## Teknolojiler
@@ -51,7 +51,7 @@ Visual Studio'da `YMH219-SpeechApp.sln` dosyasını açıp `SpeechApp` projesini
 
 ## Doğrulama durumu
 
-Bu hazırlıkta macOS üzerinde .NET SDK ile **Release derlemesi: 0 hata, 0 uyarı**; platform bağımsız davranış testleri **17/17 başarılı** olarak doğrulandı. Gerçek Windows formu, hoparlör, mikrofon, konuşma paketi ve kapatma senaryoları bu ortamda çalıştırılmadı. Bunlar [Windows kontrol listesinde](docs/WINDOWS-KONTROL.md) bekliyor. Derlenmiş olmak sesli dönüşümün cihazda denenmiş olduğu anlamına gelmez.
+3 Kasım 2026 Windows x64 doğrulaması: .NET SDK 10.0.403 ile Release derlemesi **0 uyarı / 0 hata**, davranış testleri **17/17 başarılı**. SAPI ses üretimi ve üretilmiş İngilizce WAV girdisinden tanıma başarılı; varsayılan mikrofon girişi açıldı. Türkçe Tolga okuma sesi ve en-US dikte tanıyıcısı bulundu. Gerçek mikrofondan dikte ve düğmelerin etkileşimli kontrolü bekliyor.
 
 ## Ekran görüntüleri — Windows çekimi bekleniyor
 

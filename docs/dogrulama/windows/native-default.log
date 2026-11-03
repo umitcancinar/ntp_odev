@@ -1,0 +1,16 @@
+OpenCV: 4.13.0
+PASS OpenCV ve yüz algılama modeli
+İki etiket ve tek etiket native çağrıları geçti; gerçek yüz doğruluğu ölçülmedi.
+PASS LBPH native eğitim ve tahmin (sentetik test verisi)
+Ses: Microsoft David Desktop (en-US)
+Ses: Microsoft Zira Desktop (en-US)
+Ses: Microsoft David (en-US)
+Ses: Microsoft Mark (en-US)
+Ses: Microsoft Zira (en-US)
+Ses: Microsoft Tolga (tr-TR)
+Bellekte üretilen WAV: 92842 bayt (kaydedilmedi).
+PASS SAPI sesleri ve ses üretimi
+Tanıyıcı: MS-1033-80-DESK (en-US)
+Üretilmiş sesten sonuç: Windows speech test (mikrofon kullanılmadı).
+PASS SAPI İngilizce tanıma: üretilmiş WAV girdisi
+Başarısız kontrol: 0. Bu kontrol gerçek dikte ve kişi tanıma denemesinin yerine geçmez.

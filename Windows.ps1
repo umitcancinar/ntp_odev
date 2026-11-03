@@ -1,5 +1,5 @@
 param(
-    [ValidateSet('Menu', 'Check', 'Build', 'Tests', 'Publish')]
+    [ValidateSet('Menu', 'Check', 'NativeCheck', 'Build', 'Tests', 'Publish')]
     [string]$Action = 'Menu',
     [ValidateSet('All', 'FlappyBird', 'KeyEventLogger', 'ChatApp', 'SpeechApp', 'FaceRecognition')]
     [string]$Project = 'All'
@@ -16,6 +16,17 @@ $projects = @(
 )
 
 function Require-Sdk {
+    if (-not (Get-Command dotnet -ErrorAction SilentlyContinue)) {
+        $roots = @($env:DOTNET_ROOT, [Environment]::GetEnvironmentVariable('DOTNET_ROOT', 'User'))
+        if ($env:ProgramFiles) { $roots += Join-Path $env:ProgramFiles 'dotnet' }
+        foreach ($root in $roots) {
+            if ($root -and (Test-Path -LiteralPath (Join-Path $root 'dotnet.exe'))) {
+                $env:PATH = "$root;$env:PATH"
+                $env:DOTNET_ROOT = $root
+                break
+            }
+        }
+    }
     if (-not (Get-Command dotnet -ErrorAction SilentlyContinue)) {
         throw '.NET 10 SDK yok. https://dotnet.microsoft.com/download/dotnet/10.0 adresinden x64 SDK kurun; terminali yeniden acin. Alternatif: winget install --id Microsoft.DotNet.SDK.10 --exact'
     }
@@ -87,6 +98,11 @@ try {
             Write-Host 'SDK ve kaynak yollar bulundu. Gercek UI, kamera ve mikrofon kontrolu ayrica yapilmalidir.'
         }
         'Build' { foreach ($item in $selected) { Build-Project -Item $item } }
+        'NativeCheck' {
+            Require-Sdk
+            if ($env:OS -ne 'Windows_NT') { throw 'Native kontrol Windows gerektirir.' }
+            Invoke-Dotnet -Arguments @('run', '--project', (Join-Path $PSScriptRoot 'tools/WindowsCheck'), '-c', 'Release')
+        }
         'Tests' { foreach ($item in $selected) { Test-Project -Item $item } }
         'Publish' { foreach ($item in $selected) { Publish-Project -Item $item } }
         'Menu' {
@@ -101,6 +117,7 @@ try {
                 Write-Host 'B  Tum kaynaklari derle'
                 Write-Host 'T  Tum davranis testlerini calistir'
                 Write-Host 'K  SDK ve kaynak kontrolu'
+                Write-Host 'N  OpenCV ve Windows konusma bilesenleri kontrolu'
                 Write-Host '0  Cikis'
                 $choice = Read-Host 'Secim'
                 if ($choice -eq '0') { break }
@@ -114,6 +131,7 @@ try {
                         'B' { foreach ($item in $projects) { Build-Project -Item $item } }
                         'T' { foreach ($item in $projects) { Test-Project -Item $item } }
                         'K' { Require-Sdk; Invoke-Dotnet -Arguments @('--info'); Check-Sources -Items $projects }
+                        'N' { Require-Sdk; Invoke-Dotnet -Arguments @('run', '--project', (Join-Path $PSScriptRoot 'tools/WindowsCheck'), '-c', 'Release') }
                         default { Write-Host 'Listeden bir secim girin.' }
                     }
                 }

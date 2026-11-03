@@ -1,0 +1,30 @@
+  Geri yüklenecek projeler belirleniyor...
+  [REPO]\YMH219-FlappyBird\src\FlappyBird.Core\FlappyBird.Core.csproj geri yüklendi (1,35 dk içinde).
+  [REPO]\YMH219-FlappyBird\src\FlappyBird\FlappyBird.csproj geri yüklendi (1,35 dk içinde).
+  FlappyBird.Core -> [REPO]\YMH219-FlappyBird\src\FlappyBird.Core\bin\Release\net10.0\FlappyBird.Core.dll
+  FlappyBird -> [REPO]\YMH219-FlappyBird\src\FlappyBird\bin\Release\net10.0-windows\win-x64\FlappyBird.dll
+  FlappyBird -> [REPO]\windows-apps\FlappyBird\
+  Geri yüklenecek projeler belirleniyor...
+  [REPO]\YMH219-KeyEventLogger\src\KeyEventLogger\KeyEventLogger.csproj geri yüklendi (213 ms içinde).
+  [REPO]\YMH219-KeyEventLogger\src\KeyEventLogger.Core\KeyEventLogger.Core.csproj geri yüklendi (213 ms içinde).
+  KeyEventLogger.Core -> [REPO]\YMH219-KeyEventLogger\src\KeyEventLogger.Core\bin\Release\net10.0\KeyEventLogger.Core.dll
+  KeyEventLogger -> [REPO]\YMH219-KeyEventLogger\src\KeyEventLogger\bin\Release\net10.0-windows\win-x64\KeyEventLogger.dll
+  KeyEventLogger -> [REPO]\windows-apps\KeyEventLogger\
+  Geri yüklenecek projeler belirleniyor...
+  [REPO]\YMH219-ChatApp\src\ChatApp.Core\ChatApp.Core.csproj geri yüklendi (213 ms içinde).
+  [REPO]\YMH219-ChatApp\src\ChatApp\ChatApp.csproj geri yüklendi (213 ms içinde).
+  ChatApp.Core -> [REPO]\YMH219-ChatApp\src\ChatApp.Core\bin\Release\net10.0\ChatApp.Core.dll
+  ChatApp -> [REPO]\YMH219-ChatApp\src\ChatApp\bin\Release\net10.0-windows\win-x64\ChatApp.dll
+  ChatApp -> [REPO]\windows-apps\ChatApp\
+  Geri yüklenecek projeler belirleniyor...
+  [REPO]\YMH219-SpeechApp\src\SpeechApp\SpeechApp.csproj geri yüklendi (222 ms içinde).
+  [REPO]\YMH219-SpeechApp\src\SpeechApp.Core\SpeechApp.Core.csproj geri yüklendi (222 ms içinde).
+  SpeechApp.Core -> [REPO]\YMH219-SpeechApp\src\SpeechApp.Core\bin\Release\net10.0\SpeechApp.Core.dll
+  SpeechApp -> [REPO]\YMH219-SpeechApp\src\SpeechApp\bin\Release\net10.0-windows\win-x64\SpeechApp.dll
+  SpeechApp -> [REPO]\windows-apps\SpeechApp\
+  Geri yüklenecek projeler belirleniyor...
+  [REPO]\YMH219-FaceRecognition\src\FaceRecognition.Core\FaceRecognition.Core.csproj geri yüklendi (219 ms içinde).
+  [REPO]\YMH219-FaceRecognition\src\FaceRecognition\FaceRecognition.csproj geri yüklendi (219 ms içinde).
+  FaceRecognition.Core -> [REPO]\YMH219-FaceRecognition\src\FaceRecognition.Core\bin\Release\net10.0\FaceRecognition.Core.dll
+  FaceRecognition -> [REPO]\YMH219-FaceRecognition\src\FaceRecognition\bin\Release\net10.0-windows\win-x64\FaceRecognition.dll
+  FaceRecognition -> [REPO]\windows-apps\FaceRecognition\

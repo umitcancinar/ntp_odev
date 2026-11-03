@@ -1,0 +1,55 @@
+  Geri yüklenecek projeler belirleniyor...
+  Geri yükleme için tüm projeler güncel.
+  FlappyBird.Core -> [REPO]\YMH219-FlappyBird\src\FlappyBird.Core\bin\Release\net10.0\FlappyBird.Core.dll
+  FlappyBird.Tests -> [REPO]\YMH219-FlappyBird\tests\FlappyBird.Tests\bin\Release\net10.0\FlappyBird.Tests.dll
+  FlappyBird -> [REPO]\YMH219-FlappyBird\src\FlappyBird\bin\Release\net10.0-windows\FlappyBird.dll
+
+Oluşturma başarılı oldu.
+    0 Uyarı
+    0 Hata
+
+Geçen Süre 00:00:00.88
+  Geri yüklenecek projeler belirleniyor...
+  Geri yükleme için tüm projeler güncel.
+  KeyEventLogger.Core -> [REPO]\YMH219-KeyEventLogger\src\KeyEventLogger.Core\bin\Release\net10.0\KeyEventLogger.Core.dll
+  KeyEventLogger.Tests -> [REPO]\YMH219-KeyEventLogger\tests\KeyEventLogger.Tests\bin\Release\net10.0\KeyEventLogger.Tests.dll
+  KeyEventLogger -> [REPO]\YMH219-KeyEventLogger\src\KeyEventLogger\bin\Release\net10.0-windows\KeyEventLogger.dll
+
+Oluşturma başarılı oldu.
+    0 Uyarı
+    0 Hata
+
+Geçen Süre 00:00:00.90
+  Geri yüklenecek projeler belirleniyor...
+  Geri yükleme için tüm projeler güncel.
+  ChatApp.Core -> [REPO]\YMH219-ChatApp\src\ChatApp.Core\bin\Release\net10.0\ChatApp.Core.dll
+  ChatApp.Tests -> [REPO]\YMH219-ChatApp\tests\ChatApp.Tests\bin\Release\net10.0\ChatApp.Tests.dll
+  ChatApp -> [REPO]\YMH219-ChatApp\src\ChatApp\bin\Release\net10.0-windows\ChatApp.dll
+
+Oluşturma başarılı oldu.
+    0 Uyarı
+    0 Hata
+
+Geçen Süre 00:00:00.83
+  Geri yüklenecek projeler belirleniyor...
+  Geri yükleme için tüm projeler güncel.
+  SpeechApp.Core -> [REPO]\YMH219-SpeechApp\src\SpeechApp.Core\bin\Release\net10.0\SpeechApp.Core.dll
+  SpeechApp.Tests -> [REPO]\YMH219-SpeechApp\tests\SpeechApp.Tests\bin\Release\net10.0\SpeechApp.Tests.dll
+  SpeechApp -> [REPO]\YMH219-SpeechApp\src\SpeechApp\bin\Release\net10.0-windows\SpeechApp.dll
+
+Oluşturma başarılı oldu.
+    0 Uyarı
+    0 Hata
+
+Geçen Süre 00:00:00.83
+  Geri yüklenecek projeler belirleniyor...
+  Geri yükleme için tüm projeler güncel.
+  FaceRecognition.Core -> [REPO]\YMH219-FaceRecognition\src\FaceRecognition.Core\bin\Release\net10.0\FaceRecognition.Core.dll
+  FaceRecognition.Tests -> [REPO]\YMH219-FaceRecognition\tests\FaceRecognition.Tests\bin\Release\net10.0\FaceRecognition.Tests.dll
+  FaceRecognition -> [REPO]\YMH219-FaceRecognition\src\FaceRecognition\bin\Release\net10.0-windows\FaceRecognition.dll
+
+Oluşturma başarılı oldu.
+    0 Uyarı
+    0 Hata
+
+Geçen Süre 00:00:01.23

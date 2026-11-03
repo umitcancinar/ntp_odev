@@ -8,7 +8,14 @@ var tests = new (string, Action)[] {
     ("Temizle kayıtları siler oturum durumunu korur", () => { var s=new LogSession(); s.Start(); s.Record(KeyEventKind.KeyDown,"A",stamp); s.Clear(); Check(s.IsRecording && s.Entries.Count==0); }),
     ("Parola alanı odaktayken olay kaydedilmez", () => { var s=new LogSession(); s.Start(); Check(!s.Record(KeyEventKind.KeyPress,"x",stamp,true) && s.Entries.Count==0); }),
     ("UTF8 dosyası Türkçe karakter ve olay bilgisini korur", () => { var s=new LogSession(); s.Start(); s.Record(KeyEventKind.KeyPress,"İğüş",stamp); var path=Path.GetTempFileName(); try { s.Save(path); var text=File.ReadAllText(path,Encoding.UTF8); Check(text.Contains("İğüş") && text.Contains("KeyPress") && text.Contains("18:30:00") && text.Contains("+03:00")); } finally { File.Delete(path); } }),
-    ("Dosya hatası çağırana bildirilir", () => { var s=new LogSession(); Throws<UnauthorizedAccessException>(()=>s.Save(Path.GetTempPath())); }),
+    ("Dosya hatası çağırana bildirilir ve kayıtlar korunur", () => {
+        var s = new LogSession();
+        s.Start();
+        s.Record(KeyEventKind.KeyDown, "A", stamp);
+        var missing = Path.Combine(Path.GetTempPath(), Guid.NewGuid().ToString("N"), "olaylar.txt");
+        Throws<DirectoryNotFoundException>(() => s.Save(missing));
+        Check(s.Entries.Count == 1 && s.IsRecording);
+    }),
     ("Kontrol karakterleri tek satırda okunur", () => { var e=new KeyLogEntry(stamp,KeyEventKind.KeyPress,"\r\n\t"); Check(!e.ToString().Contains('\n') && !e.ToString().Contains('\r') && e.ToString().Contains("\\n")); }),
     ("Kayıt sınırında oturum durur ve eski kayıtlar korunur", () => { var s=new LogSession(); s.Start(); for(int i=0;i<LogSession.MaxEntries;i++) Check(s.Record(KeyEventKind.KeyDown,"A",stamp)); Check(!s.IsRecording && !s.Record(KeyEventKind.KeyDown,"B",stamp) && s.Entries.Count==LogSession.MaxEntries); }),
     ("Boş kayıt açıklaması reddedilir", () => { var s=new LogSession(); s.Start(); Throws<ArgumentException>(()=>s.Record(KeyEventKind.KeyDown,"",stamp)); })

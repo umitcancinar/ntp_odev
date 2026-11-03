@@ -13,6 +13,7 @@ public sealed class MainForm : Form
     private readonly NumericUpDown _threshold = new() { Minimum = 10, Maximum = 200, Value = 70, Width = 75, AccessibleName = "Bilinmeyen yüz uzaklık eşiği" };
     private readonly TextBox _label = new() { Dock = DockStyle.Top, MaxLength = 40, AccessibleName = "Örneğin etiketi", PlaceholderText = "Örn. Kişi A" };
     private readonly CheckBox _consent = new() { AutoSize = true, MaximumSize = new Size(290, 0), Text = "Bu örnekler bana ait veya gönüllünün izni var." };
+    private readonly CheckBox _ownFaceOnly = new() { AutoSize = true, MaximumSize = new Size(270, 0), Text = "Yalnızca kendi yüzümle çalışıyorum (tek etiket)." };
     private readonly ListBox _samples = new() { Dock = DockStyle.Fill, IntegralHeight = false, AccessibleName = "Yerel etiketler ve örnek sayıları" };
     private readonly Button _start = MakeButton("Kamerayı &Başlat");
     private readonly Button _stop = MakeButton("Kamerayı &Durdur");
@@ -75,19 +76,20 @@ public sealed class MainForm : Form
     private GroupBox BuildTrainingPanel()
     {
         var group = new GroupBox { Text = "Gönüllü yerel örnekler", Dock = DockStyle.Fill, Padding = new Padding(12) };
-        var panel = new TableLayoutPanel { Dock = DockStyle.Fill, RowCount = 11, ColumnCount = 1 };
-        for (int i = 0; i < 11; i++) panel.RowStyles.Add(new RowStyle(i == 5 ? SizeType.Percent : SizeType.AutoSize, i == 5 ? 100 : 0));
-        panel.Controls.Add(new Label { Text = "Tek yüz görünürken etiket girip kaydedin. Her etiket için en az 3 farklı örnek; en az 2 etiket gerekir.", AutoSize = true, MaximumSize = new Size(270, 0), Margin = new Padding(0, 0, 0, 12) }, 0, 0);
+        var panel = new TableLayoutPanel { Dock = DockStyle.Fill, RowCount = 12, ColumnCount = 1 };
+        for (int i = 0; i < 12; i++) panel.RowStyles.Add(new RowStyle(i == 5 ? SizeType.Percent : SizeType.AutoSize, i == 5 ? 100 : 0));
+        panel.Controls.Add(new Label { Text = "Tek yüz görünürken etiket girip kaydedin. Her etiket için en az 3 farklı örnek ekleyin. İki gönüllü etiketi veya kendi yüzünüzle tek etiket kullanın.", AutoSize = true, MaximumSize = new Size(270, 0), Margin = new Padding(0, 0, 0, 12) }, 0, 0);
         panel.Controls.Add(new Label { Text = "Örnek etiketi:", AutoSize = true }, 0, 1);
         panel.Controls.Add(_label, 0, 2);
         panel.Controls.Add(_consent, 0, 3);
         panel.Controls.Add(_save, 0, 4);
         panel.Controls.Add(_samples, 0, 5);
-        panel.Controls.Add(_train, 0, 6);
-        panel.Controls.Add(new Label { Text = "Bilinmeyen yüz eşiği (LBPH):", AutoSize = true }, 0, 7);
-        panel.Controls.Add(_threshold, 0, 8);
-        panel.Controls.Add(new Label { Text = "Uzaklık düşükse benzerlik yüksektir. Skor bir güven yüzdesi değildir. Eşik üstü: Bilinmeyen.", AutoSize = true, MaximumSize = new Size(270, 0), Margin = new Padding(0, 4, 0, 12) }, 0, 9);
-        panel.Controls.Add(_folder, 0, 10);
+        panel.Controls.Add(_ownFaceOnly, 0, 6);
+        panel.Controls.Add(_train, 0, 7);
+        panel.Controls.Add(new Label { Text = "Bilinmeyen yüz eşiği (LBPH):", AutoSize = true }, 0, 8);
+        panel.Controls.Add(_threshold, 0, 9);
+        panel.Controls.Add(new Label { Text = "Uzaklık düşükse benzerlik yüksektir. Skor bir güven yüzdesi değildir. Tek etiket, kişiler arası ayırımı ölçmez.", AutoSize = true, MaximumSize = new Size(270, 0), Margin = new Padding(0, 4, 0, 12) }, 0, 10);
+        panel.Controls.Add(_folder, 0, 11);
         group.Controls.Add(panel);
         return group;
     }
@@ -248,8 +250,9 @@ public sealed class MainForm : Form
     {
         await StopCameraAsync();
         var samples = _store!.GetSamples();
+        bool ownFaceOnly = _ownFaceOnly.Checked;
         _status.Text = "LBPH modeli yerel örneklerle eğitiliyor…";
-        await Task.Run(() => _vision!.Train(samples));
+        await Task.Run(() => _vision!.Train(samples, ownFaceOnly));
         _status.Text = $"Eğitim tamamlandı · {samples.Count} etiket, {samples.Values.Sum(v => v.Length)} örnek. Kamerayı başlatın veya yeni bir test görüntüsü seçin.";
     }
 
@@ -271,6 +274,7 @@ public sealed class MainForm : Form
         _train.Enabled = ready;
         _folder.Enabled = _store is not null && !_closing;
         _label.Enabled = ready; _consent.Enabled = ready; _threshold.Enabled = ready;
+        _ownFaceOnly.Enabled = ready;
     }
 
     private void ReportError(Exception error)

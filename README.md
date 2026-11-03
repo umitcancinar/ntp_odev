@@ -22,9 +22,9 @@ powershell -NoProfile -ExecutionPolicy Bypass -File .\Windows.ps1 -Action Build
 powershell -NoProfile -ExecutionPolicy Bypass -File .\Windows.ps1 -Action Tests
 ```
 
-`-Project ChatApp` gibi bir ad ile yalnız bir proje seçilebilir. Betik yalnız bu işlem için execution policy parametresi kullanır, kalıcı Windows ayarını değiştirmez. Yönetici olarak çalıştırmak gerekmez. İlk NuGet geri yüklemesi internet ister. Hazır self-contained EXE'ler .NET SDK gerektirmez; yüz uygulaması için ayrıca VC++ x64 çalışma zamanı gerekebilir.
+`-Project ChatApp` gibi bir ad ile yalnız bir proje seçilebilir. `-Action NativeCheck` (menüde `N`) OpenCV ve SAPI bileşenlerini donanımı açmadan denetler. Betik yalnız bu işlem için execution policy parametresi kullanır, kalıcı Windows ayarını değiştirmez. Yönetici olarak çalıştırmak gerekmez. İlk NuGet geri yüklemesi internet ister. Hazır self-contained EXE'ler .NET SDK gerektirmez; yüz uygulaması için ayrıca VC++ x64 çalışma zamanı gerekebilir.
 
-**Sonraki çalışma:** [WINDOWS-AKSAM.md](WINDOWS-AKSAM.md). Derleme/test kanıtı ve sınırları: [DOGRULAMA.md](DOGRULAMA.md).
+Windows üzerinde beş Release derleme (0 uyarı / 0 hata), 70/70 davranış testi, OpenCV, SAPI ve cihaz erişim kontrolleri geçti. Ayrıntılar: [Windows doğrulaması](docs/WINDOWS-DOGRULAMA.md). Etkileşimli arayüz kontrolleri ve gerçek ekran görüntüleri bekliyor.
 
 ## GitHub ve teslim
 
@@ -32,6 +32,6 @@ Bu GitHub reposu beş uygulamayı tek yerde toplar; klonlandığında tek üst G
 
 **Föy son teslimde beş ayrı public repo istiyor.** Bu toplu çalışma deposundan uygulamalar daha sonra ayrı teslim depolarına aktarılabilir.
 
-Teslimden önce her README'de öğrenci adı/numarası doldurulacak ve uygulamadan **iki gerçek ekran görüntüsü** eklenecek. Şu an görüntüler yoktur; çekim senaryoları her deponun `docs/screenshots/README.md` dosyasındadır. Windows çalışması doğrulanmadan teslim tamamlandı sayılmaz.
+Öğrenci: **Ümitcan Çinar — 250541009**. Her uygulamadan **iki gerçek ekran görüntüsü** eklenecek. Şu an görüntüler yoktur; çekim senaryoları her deponun `docs/screenshots/README.md` dosyasındadır. Pencere etkileşimleri, gerçek mikrofon diktesi ve yerel yüz eğitimi tamamlanmalı.
 
 Classroom'a yalnız GitHub profil bağlantısı; son teslim **30 Kasım 2026, 23:59 (Türkiye saati)**.

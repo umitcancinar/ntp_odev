@@ -43,6 +43,7 @@ public sealed class MainForm : Form
         Controls.Add(layout);
         timer.Tick += (_, _) => TickGame();
         KeyDown += OnGameKeyDown;
+        KeyPress += (_, e) => { if (e.KeyChar is ' ' or 'r' or 'R' or 'p' or 'P') e.Handled = true; };
         KeyUp += (_, e) => { heldKeys.Remove(e.KeyCode); if (!heldKeys.Contains(Keys.Space) && !heldKeys.Contains(Keys.Up)) game.ReleaseFlap(); };
         Deactivate += (_, _) => { heldKeys.Clear(); game.ReleaseFlap(); if (game.State == GameState.Running && !paused) TogglePause(); };
         Shown += (_, _) => canvas.Focus();
@@ -79,7 +80,8 @@ public sealed class MainForm : Form
     private void OnGameKeyDown(object? sender, KeyEventArgs e)
     {
         if (e.KeyCode is not (Keys.Space or Keys.Up or Keys.R or Keys.P)) return;
-        e.SuppressKeyPress = true;
+        // KeyUp must reach the form so the next press can flap again.
+        e.Handled = true;
         bool firstPress = heldKeys.Add(e.KeyCode);
         if (!firstPress) return;
         if (e.KeyCode == Keys.R) { NewGame(); heldKeys.Add(Keys.R); return; }

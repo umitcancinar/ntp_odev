@@ -1,0 +1,47 @@
+.NET SDK:
+ Version:           10.0.403
+ Commit:            5a2162bea6
+ Workload version:  10.0.400-manifests.a00bebb6
+ MSBuild version:   18.9.15+5a2162bea
+
+Çalışma Zamanı Ortamı:
+ OS Name:     Windows
+ OS Version:  10.0.26300
+ OS Platform: Windows
+ RID:         win-x64
+ Base Path:   [DOTNET_ROOT]\sdk\10.0.403\
+
+.NET iş yükleri yüklendi:
+Görüntülenecek yüklü iş yükü yok.
+Yeni bildirimler yüklenirken workload sets kullanacak şekilde yapılandırılmıştır.
+İş yükü kümesi yüklenmemiştir. Bir iş yükü seti yüklemek için “dotnet workload restore” komutunu çalıştırın.
+
+Host:
+  Version:      10.0.14
+  Architecture: x64
+  Commit:       0427b9abbe
+
+.NET SDKs installed:
+  10.0.403 [[DOTNET_ROOT]\sdk]
+
+.NET runtimes installed:
+  Microsoft.AspNetCore.App 10.0.14 [[DOTNET_ROOT]\shared\Microsoft.AspNetCore.App]
+  Microsoft.NETCore.App 10.0.14 [[DOTNET_ROOT]\shared\Microsoft.NETCore.App]
+  Microsoft.WindowsDesktop.App 10.0.14 [[DOTNET_ROOT]\shared\Microsoft.WindowsDesktop.App]
+
+Other architectures found:
+  None
+
+Environment variables:
+  DOTNET_ROOT                              [[DOTNET_ROOT]]
+
+global.json file:
+  Not found
+
+Learn more:
+  https://aka.ms/dotnet/info
+
+Download .NET:
+  https://aka.ms/dotnet/download
+Kaynak cozum yollari dogrulandi.
+SDK ve kaynak yollar bulundu. Gercek UI, kamera ve mikrofon kontrolu ayrica yapilmalidir.

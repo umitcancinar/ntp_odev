@@ -1,3 +1,5 @@
+> Güncel Windows kontrolü: [3 Kasım 2026 Windows doğrulaması](docs/WINDOWS-DOGRULAMA.md). Beş derleme ve 70 test başarılı; etkileşimli arayüz/ekran görüntüsü kontrolleri bekliyor.
+
 # Doğrulama raporu — 3 Kasım 2026
 
 Bu rapor macOS arm64 ortamında yapılan hazırlığı kapsar. Windows arayüzlerinin çalıştığı, kamera/mikrofonun kullanıldığı veya ödevlerin teslim edildiği anlamına gelmez.
