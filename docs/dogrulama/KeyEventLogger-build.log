@@ -1,0 +1,13 @@
+  Determining projects to restore...
+  Restored /Users/umitcancinar/Desktop/ntp_5/YMH219-KeyEventLogger/src/KeyEventLogger.Core/KeyEventLogger.Core.csproj (in 48 ms).
+  Restored /Users/umitcancinar/Desktop/ntp_5/YMH219-KeyEventLogger/src/KeyEventLogger/KeyEventLogger.csproj (in 158 ms).
+  1 of 3 projects are up-to-date for restore.
+  KeyEventLogger.Core -> /Users/umitcancinar/Desktop/ntp_5/YMH219-KeyEventLogger/src/KeyEventLogger.Core/bin/Release/net10.0/KeyEventLogger.Core.dll
+  KeyEventLogger.Tests -> /Users/umitcancinar/Desktop/ntp_5/YMH219-KeyEventLogger/tests/KeyEventLogger.Tests/bin/Release/net10.0/KeyEventLogger.Tests.dll
+  KeyEventLogger -> /Users/umitcancinar/Desktop/ntp_5/YMH219-KeyEventLogger/src/KeyEventLogger/bin/Release/net10.0-windows/KeyEventLogger.dll
+
+Build succeeded.
+    0 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:02.87

@@ -1,0 +1,13 @@
+PASS İki kullanıcı ve zaman damgalı UTF-8 mesaj
+PASS İstemci listesi ve ayrılma
+PASS Sunucu durunca istemci kapanır ve tekrar bağlanır
+PASS Reddedilen bağlantıdan sonra yeniden bağlanır
+PASS Boş kullanıcı ve boş/uzun mesaj reddedilir
+PASS Bozuk JSON bağlantıyı kapatır, sunucu çalışır
+PASS Aşırı uzun çerçeve bağlantıyı kapatır
+PASS Eşzamanlı mesajlar birbirine karışmaz
+PASS Yarım çerçeve sunucu durmasını engellemez
+PASS Tekrarlanan bağlantı ve ayrılma kaynakları bırakır
+PASS Yoğun mesaj akışında yeni kullanıcı el sıkışması
+PASS Okumayan sunucuya gönderme zaman aşımıyla sonlanır
+12/12 geçti; 0 başarısız.

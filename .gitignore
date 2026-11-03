@@ -1,0 +1,10 @@
+**/bin/
+**/obj/
+**/.vs/
+.DS_Store
+*.user
+*.suo
+*.zip
+windows-apps/
+**/TestResults/
+**/publish/

@@ -1,0 +1,25 @@
+
+YMH219 - Windows uygulamalari
+1  Flappy Bird
+2  Key Event Logger
+3  Chat (iki pencere acar)
+4  Speech-to-Text / Text-to-Speech
+5  Yuz Algilama ve Tanima
+B  Tum kaynaklari derle
+T  Tum davranis testlerini calistir
+K  SDK ve kaynak kontrolu
+0  Cikis
+
+YMH219 - Windows uygulamalari
+1  Flappy Bird
+2  Key Event Logger
+3  Chat (iki pencere acar)
+4  Speech-to-Text / Text-to-Speech
+5  Yuz Algilama ve Tanima
+B  Tum kaynaklari derle
+T  Tum davranis testlerini calistir
+K  SDK ve kaynak kontrolu
+0  Cikis
+/Users/umitcancinar/Desktop/ntp_5/YMH219-ChatApp/src/ChatApp/bin/Release/net10.0-windows/ChatApp.exe :: /Users/umitcancinar/Desktop/ntp_5/YMH219-ChatApp/src/ChatApp/bin/Release/net10.0-windows
+/Users/umitcancinar/Desktop/ntp_5/YMH219-ChatApp/src/ChatApp/bin/Release/net10.0-windows/ChatApp.exe :: /Users/umitcancinar/Desktop/ntp_5/YMH219-ChatApp/src/ChatApp/bin/Release/net10.0-windows
+PASS: Prepared=False Launches=2 Builds=2

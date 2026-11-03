@@ -1,0 +1,13 @@
+  Determining projects to restore...
+  Restored /Users/umitcancinar/Desktop/ntp_5/YMH219-SpeechApp/src/SpeechApp.Core/SpeechApp.Core.csproj (in 61 ms).
+  Restored /Users/umitcancinar/Desktop/ntp_5/YMH219-SpeechApp/src/SpeechApp/SpeechApp.csproj (in 143 ms).
+  1 of 3 projects are up-to-date for restore.
+  SpeechApp.Core -> /Users/umitcancinar/Desktop/ntp_5/YMH219-SpeechApp/src/SpeechApp.Core/bin/Release/net10.0/SpeechApp.Core.dll
+  SpeechApp.Tests -> /Users/umitcancinar/Desktop/ntp_5/YMH219-SpeechApp/tests/SpeechApp.Tests/bin/Release/net10.0/SpeechApp.Tests.dll
+  SpeechApp -> /Users/umitcancinar/Desktop/ntp_5/YMH219-SpeechApp/src/SpeechApp/bin/Release/net10.0-windows/SpeechApp.dll
+
+Build succeeded.
+    0 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:03.03

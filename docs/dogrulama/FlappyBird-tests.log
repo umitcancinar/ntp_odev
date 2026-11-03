@@ -1,0 +1,14 @@
+PASS Yerçekimi kuşu aşağı hızlandırır
+PASS Zıplama yukarı hız verir
+PASS Boru sola hareket eder
+PASS Geçiş skoru yalnızca bir kez alınır
+PASS Yeniden kullanılan boru tekrar skor verir
+PASS Boşlukta çarpışma yoktur
+PASS Üst ve alt borular çarpışır
+PASS Yatayda ayrık nesneler çarpışmaz
+PASS Basılı tutma tekrar zıplatmaz
+PASS Zemin çarpışması oyunu durdurur
+PASS Yeniden başlatma fizik skor ve tuş durumunu sıfırlar
+PASS Geçersiz zaman adımı reddedilir
+PASS Oyun oturumu geçişleri sayar ve boruları yeniden kullanır
+13/13 başarılı

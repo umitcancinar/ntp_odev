@@ -1,0 +1,18 @@
+PASS Boş ve yalnız boşluk metni reddedilir
+PASS Türkçe metin korunur ve kenar boşluğu temizlenir
+PASS Tam sınırdaki metin kabul edilir
+PASS Sınırı aşan metin reddedilir
+PASS Kurulu olmayan dil için hayali tanıyıcı oluşturulmaz
+PASS Kurulu tam dil eşleşmesi önceliklidir
+PASS Aynı dilin kurulu lehçesi seçilebilir
+PASS Tercih edilen dil yoksa gerçek kurulu ilk seçenek döner
+PASS Okuma sürerken dinleme ve ikinci okuma başlatılamaz
+PASS Dinleme sürerken sesli okuma başlatılamaz
+PASS Duraklatma ve devam doğru sırada çalışır
+PASS İptal tamamlanana kadar yeni iş başlatılamaz
+PASS Duraklatılmış okuma durdurulabilir
+PASS Dinleme iptali bitene kadar mikrofon yeniden açılamaz
+PASS Eski okuma bitişi etkin dinlemeyi etkilemez
+PASS Eski dinleme bitişi etkin okumayı etkilemez
+PASS Tamamlanan işler yeniden başlatılabilir
+17/17 başarılı; 0 başarısız.

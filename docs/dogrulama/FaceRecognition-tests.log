@@ -1,0 +1,16 @@
+PASS Türkçe etiket korunur, dış boşluklar temizlenir
+PASS Boş etiket reddedilir
+PASS Dizin geçişi reddedilir
+PASS Windows aygıt adı reddedilir
+PASS Çok uzun etiket reddedilir
+PASS Sıfır etiket ile eğitim engellenir
+PASS Tek etiket ile eğitim engellenir
+PASS Az örnekli ikinci etiket eğitimi engeller
+PASS İki etiket ve üçer örnek ile eğitim açılır
+PASS Eşik altındaki geçerli etiket kabul edilir
+PASS Eşik sınırı kabul edilir
+PASS Eşiğin üstü bilinmeyendir
+PASS OpenCV bilinmeyen etiketi reddedilir
+PASS Geçersiz sayısal skor kabul edilmez
+PASS Negatif skor ve eşik reddedilir
+15/15 passed

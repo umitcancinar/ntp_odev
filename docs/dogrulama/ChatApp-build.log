@@ -1,0 +1,13 @@
+  Determining projects to restore...
+  Restored /Users/umitcancinar/Desktop/ntp_5/YMH219-ChatApp/src/ChatApp.Core/ChatApp.Core.csproj (in 45 ms).
+  Restored /Users/umitcancinar/Desktop/ntp_5/YMH219-ChatApp/src/ChatApp/ChatApp.csproj (in 145 ms).
+  1 of 3 projects are up-to-date for restore.
+  ChatApp.Core -> /Users/umitcancinar/Desktop/ntp_5/YMH219-ChatApp/src/ChatApp.Core/bin/Release/net10.0/ChatApp.Core.dll
+  ChatApp.Tests -> /Users/umitcancinar/Desktop/ntp_5/YMH219-ChatApp/tests/ChatApp.Tests/bin/Release/net10.0/ChatApp.Tests.dll
+  ChatApp -> /Users/umitcancinar/Desktop/ntp_5/YMH219-ChatApp/src/ChatApp/bin/Release/net10.0-windows/ChatApp.dll
+
+Build succeeded.
+    0 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:03.08

@@ -1,0 +1,72 @@
+
+YMH219 - Windows uygulamalari
+1  Flappy Bird
+2  Key Event Logger
+3  Chat (iki pencere acar)
+4  Speech-to-Text / Text-to-Speech
+5  Yuz Algilama ve Tanima
+B  Tum kaynaklari derle
+T  Tum davranis testlerini calistir
+K  SDK ve kaynak kontrolu
+0  Cikis
+Secim: K
+.NET SDK:
+ Version:           10.0.403
+ Commit:            5a2162bea6
+ Workload version:  10.0.400-manifests.a00bebb6
+ MSBuild version:   18.9.15+5a2162bea
+
+Runtime Environment:
+ OS Name:     Mac OS X
+ OS Version:  26.6
+ OS Platform: Darwin
+ RID:         osx-arm64
+ Base Path:   /Users/umitcancinar/.dotnet/sdk/10.0.403/
+
+.NET workloads installed:
+There are no installed workloads to display.
+Configured to use workload sets when installing new manifests.
+No workload sets are installed. Run "dotnet workload restore" to install a workload set.
+
+Host:
+  Version:      10.0.14
+  Architecture: arm64
+  Commit:       0427b9abbe
+
+.NET SDKs installed:
+  10.0.401 [/Users/umitcancinar/.dotnet/sdk]
+  10.0.403 [/Users/umitcancinar/.dotnet/sdk]
+
+.NET runtimes installed:
+  Microsoft.AspNetCore.App 10.0.12 [/Users/umitcancinar/.dotnet/shared/Microsoft.AspNetCore.App]
+  Microsoft.AspNetCore.App 10.0.14 [/Users/umitcancinar/.dotnet/shared/Microsoft.AspNetCore.App]
+  Microsoft.NETCore.App 10.0.12 [/Users/umitcancinar/.dotnet/shared/Microsoft.NETCore.App]
+  Microsoft.NETCore.App 10.0.14 [/Users/umitcancinar/.dotnet/shared/Microsoft.NETCore.App]
+
+Other architectures found:
+  None
+
+Environment variables:
+  Not set
+
+global.json file:
+  Not found
+
+Learn more:
+  https://aka.ms/dotnet/info
+
+Download .NET:
+  https://aka.ms/dotnet/download
+Kaynak cozum yollari dogrulandi.
+
+YMH219 - Windows uygulamalari
+1  Flappy Bird
+2  Key Event Logger
+3  Chat (iki pencere acar)
+4  Speech-to-Text / Text-to-Speech
+5  Yuz Algilama ve Tanima
+B  Tum kaynaklari derle
+T  Tum davranis testlerini calistir
+K  SDK ve kaynak kontrolu
+0  Cikis
+Secim: 0

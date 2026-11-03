@@ -1,0 +1,11 @@
+PASS Durdurulmuş oturum kayıt almaz
+PASS Başlat üç olay türünü zaman damgasıyla saklar
+PASS Durdur yeni kaydı engeller eski kaydı korur
+PASS Temizle kayıtları siler oturum durumunu korur
+PASS Parola alanı odaktayken olay kaydedilmez
+PASS UTF8 dosyası Türkçe karakter ve olay bilgisini korur
+PASS Dosya hatası çağırana bildirilir
+PASS Kontrol karakterleri tek satırda okunur
+PASS Kayıt sınırında oturum durur ve eski kayıtlar korunur
+PASS Boş kayıt açıklaması reddedilir
+10/10 başarılı

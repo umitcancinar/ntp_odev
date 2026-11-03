@@ -1,0 +1,174 @@
+NESNE TABANLI PROGRAMLAMA
+Laboratuvar / Ek Uygulama Ödevleri Föyü
+5 Uygulama Ödevi — GitHub Teslimli
+Öğrenci Yönergesi — Proje Geliştirme ve Teslim Kuralları
+Bilgi
+Değer
+Ders
+Nesne Tabanlı Programlama (YMH 219)
+Ödevler
+Flappy Bird · Key Event Logger · Chat Uygulaması · Speech-to-Text / Text to-Speech · OpenCV ile Yüz Tanıma
+Ortam
+Visual Studio · C# / .NET · Windows Forms
+Teslim Platformu
+GitHub + Google Classroom
+Son Teslim
+30 Kasım 2026, 23:59
+Teslim Şekli
+Classroom üzerinden GitHub profil bağlantısı; profil üzerinde 5 ayrı proje  deposu
+
+
+
+1. Genel Amaç
+Bu çalışma grubunda, dönem boyunca kullanılan C# ve nesne tabanlı programlama kavramlarını farklı uygulama  alanlarında kullanmanız beklenmektedir. Her ödev çalışan bir masaüstü uygulaması olarak geliştirilmeli; sınıf/metot  yapısı, olay yönetimi, hata kontrolleri ve kullanıcı arayüzü açısından düzenli bir proje ortaya konmalıdır.
+2. Teslim ve GitHub Kuralları
+∙ Her öğrenci kendi GitHub hesabını kullanacaktır. Başka bir öğrenciye ait hesap veya ortak hesap üzerinden teslim kabul  edilmeyecektir.
+∙ Google Classroom üzerinde yalnızca GitHub profil bağlantınızı paylaşmanız yeterlidir. Değerlendirme sırasında hesabınız  üzerindeki aşağıda adı belirtilen beş depo kontrol edilecektir.
+∙ Beş ödev için beş ayrı public repository oluşturulmalıdır. Depo adlarının föyde belirtilen adlarla aynı olması önerilir. ∙ Her repository içinde kaynak kod, .gitignore ve README.md bulunmalıdır. README dosyasına en az iki ekran  görüntüsü eklenmelidir.
+∙ Projeler 30 Kasım 2026 saat 23:59’a kadar GitHub’a yüklenmiş olmalıdır. Bu tarihten sonraki commitler geç teslim olarak  değerlendirilebilir.
+∙ Değerlendirme yalnızca ekranda çalışan uygulamaya göre yapılmayacaktır; kaynak kod, sınıf tasarımı, commit geçmişi ve  README içeriği de incelenecektir.
+∙ Öğrenciden değerlendirme sırasında kodunun belirli bir bölümünü açıklaması veya küçük bir değişiklik yapması  istenebilir.
+Önerilen Repository Adları
+∙ YMH219-FlappyBird
+∙ YMH219-KeyEventLogger
+∙ YMH219-ChatApp
+∙ YMH219-SpeechApp
+∙ YMH219-FaceRecognition
+Nesne Tabanlı Programlama · Ek Uygulama Ödevleri · Öğrenci Föyü — Sayfa 1 / 5
+3. Ödev — Flappy Bird Benzeri Masaüstü Oyunu
+Windows Forms üzerinde zamanlayıcı ve klavye olaylarının kullanıldığı basit bir oyun geliştirilecektir. Amaç, görsel  bileşenlerin çalışma zamanında hareket ettirilmesi, çarpışma kontrolü ve oyun durumunun nesne tabanlı bir yapı ile  yönetilmesidir.
+Amaç ve Kullanılacak Ders Kavramları
+∙ Form kontrolleri ve olaylar (KeyDown/KeyUp veya PreviewKeyDown)
+∙ Timer ile oyun döngüsü ve hareket
+∙ Sınıf/nesne kullanımı (oyuncu, engel veya oyun durumu)
+∙ Koşullar, sayaçlar ve temel çarpışma kontrolü
+Asgari Uygulama Gereksinimleri
+∙ Kuş/oyuncu klavye ile yukarı hareket etmeli ve yer çekimi etkisiyle aşağı inmelidir.
+∙ En az iki engel ekranda sağdan sola hareket etmeli; ekran dışına çıkan engeller yeniden konumlandırılmalıdır. ∙ Oyuncu engel veya zemine çarptığında oyun durmalı ve Game Over bilgisi gösterilmelidir. ∙ Engeller başarıyla geçildikçe skor artmalıdır.
+∙ Yeni Oyun / Yeniden Başlat işlemi bulunmalıdır.
+∙ Oyunun hız, skor ve temel durum bilgileri sınıf alanları/özellikleri ile düzenli şekilde yönetilmelidir. GitHub Teslim Düzeni
+∙ Depo adı: YMH219-FlappyBird
+∙ Kaynak kodlar depoda bulunmalı; bin/, obj/, .vs/ gibi derleme klasörleri .gitignore ile dışarıda bırakılmalıdır. ∙ README.md dosyasında projenin amacı, kullanılan teknolojiler, çalıştırma adımları ve en az 2 ekran görüntüsü  bulunmalıdır.
+∙ Commit geçmişi geliştirme sürecini göstermelidir. Yalnızca son gün tek seferde yüklenen proje, Git/GitHub kullanımı  açısından eksik değerlendirilebilir.
+İsteğe Bağlı Geliştirmeler
+∙ En yüksek skoru dosyada saklama
+∙ Seviye ilerledikçe hızın artması
+∙ Ses efekti veya farklı zorluk seviyeleri
+4. Ödev — Key Event Logger (Eğitsel Keylogger)
+Bu ödevde klavye olaylarının nasıl yakalandığı ve olay bilgilerinin uygulama içinde nasıl işlendiği gösterilecektir.  Uygulama yalnızca kendi formu aktifken yapılan tuş girişlerini gösterecek ve isteğe bağlı olarak yerel bir metin  dosyasına kaydedecektir.
+Amaç ve Kullanılacak Ders Kavramları
+∙ KeyDown, KeyUp ve/veya KeyPress olayları
+∙ Dosya işlemleri (StreamWriter/File)
+∙ Tarih-saat bilgisi ve olay kayıt formatı
+∙ Form kontrolleri, listeleme ve hata yönetimi
+Asgari Uygulama Gereksinimleri
+∙ Uygulama penceresi aktifken basılan tuş adı ve zaman bilgisi ListBox/RichTextBox üzerinde gösterilmelidir. ∙ Başlat ve Durdur butonları ile kayıt durumu kontrol edilmelidir.
+∙ Temizle butonu ile ekrandaki kayıtlar silinebilmelidir.
+∙ Kullanıcı isterse kayıtları .txt dosyasına kaydedebilmelidir.
+∙ Uygulama içinde kayıt durumunu belirten açık bir gösterge bulunmalıdır.
+Nesne Tabanlı Programlama · Ek Uygulama Ödevleri · Öğrenci Föyü — Sayfa 2 / 5
+Kapsam ve Güvenlik Sınırı
+Bu ödev gerçek sistem keyloggerı değildir. Uygulama yalnızca kendi penceresi odaktayken olay yakalamalıdır. Global  keyboard hook, gizli/arka plan çalışması, başlangıçta otomatik çalışma, parola/kimlik bilgisi yakalama, başka  uygulamalardan veri toplama veya kayıtları ağ üzerinden gönderme kesinlikle yapılmamalıdır.
+GitHub Teslim Düzeni
+∙ Depo adı: YMH219-KeyEventLogger
+∙ Kaynak kodlar depoda bulunmalı; bin/, obj/, .vs/ gibi derleme klasörleri .gitignore ile dışarıda bırakılmalıdır. ∙ README.md dosyasında projenin amacı, kullanılan teknolojiler, çalıştırma adımları ve en az 2 ekran görüntüsü  bulunmalıdır.
+∙ Commit geçmişi geliştirme sürecini göstermelidir. Yalnızca son gün tek seferde yüklenen proje, Git/GitHub kullanımı  açısından eksik değerlendirilebilir.
+İsteğe Bağlı Geliştirmeler
+∙ Toplam tuş sayısı ve en sık kullanılan tuşların istatistiğini gösterme
+∙ Kayıtları tarih/saat aralığına göre filtreleme
+5. Ödev — İstemci-Sunucu Chat Uygulaması
+İki uygulama örneğinin birbiriyle mesajlaşabildiği temel bir istemci-sunucu sohbet sistemi geliştirilecektir. Projede  nesne tabanlı tasarımın yanı sıra ağ iletişimi ve arayüzün eş zamanlı güncellenmesi üzerinde durulacaktır.
+Amaç ve Kullanılacak Ders Kavramları
+∙ TCP/IP temelleri, TcpListener ve TcpClient
+∙ StreamReader/StreamWriter veya NetworkStream
+∙ Asenkron işlemler (async/await) ve hata yönetimi
+∙ Form kontrolleri, mesaj listesi ve bağlantı durumu
+Asgari Uygulama Gereksinimleri
+∙ Aynı bilgisayarda veya aynı yerel ağda çalışabilen bir sunucu ve en az bir istemci bulunmalıdır. ∙ İstemci kullanıcı adı ile bağlanabilmelidir.
+∙ Gönderilen ve alınan mesajlar arayüzde zaman bilgisiyle gösterilmelidir.
+∙ Bağlan, Mesaj Gönder ve Bağlantıyı Kes işlevleri bulunmalıdır.
+∙ Bağlantı hataları uygulamanın kapanmasına yol açmadan kullanıcıya bildirilmelidir.
+∙ Sunucu tarafında bağlanan istemcilerin temel bilgileri listelenmelidir.
+GitHub Teslim Düzeni
+∙ Depo adı: YMH219-ChatApp
+∙ Kaynak kodlar depoda bulunmalı; bin/, obj/, .vs/ gibi derleme klasörleri .gitignore ile dışarıda bırakılmalıdır. ∙ README.md dosyasında projenin amacı, kullanılan teknolojiler, çalıştırma adımları ve en az 2 ekran görüntüsü  bulunmalıdır.
+∙ Commit geçmişi geliştirme sürecini göstermelidir. Yalnızca son gün tek seferde yüklenen proje, Git/GitHub kullanımı  açısından eksik değerlendirilebilir.
+İsteğe Bağlı Geliştirmeler
+∙ Birden fazla istemcinin aynı odaya katılması
+∙ Özel mesaj
+∙ Mesaj geçmişinin dosyaya kaydedilmesi
+6. Ödev — Speech-to-Text ve Text-to-Speech Uygulaması
+Ses ve metin arasında çift yönlü dönüşüm yapan bir Windows Forms uygulaması geliştirilecektir. Kullanıcı yazdığı  metni sesli okutabilecek, desteklenen konuşma tanıma altyapısı ile mikrofondan alınan konuşmayı metne  dönüştürebilecektir.
+Nesne Tabanlı Programlama · Ek Uygulama Ödevleri · Öğrenci Föyü — Sayfa 3 / 5
+Amaç ve Kullanılacak Ders Kavramları
+∙ Windows Forms olayları ve giriş kontrolleri
+∙ Speech API / uygun .NET konuşma kütüphanesinin kullanımı
+∙ Kaynak yönetimi ve hata kontrolü
+∙ Metin alanları, butonlar ve kullanıcı geri bildirimi
+Asgari Uygulama Gereksinimleri
+∙ Text-to-Speech bölümünde kullanıcı TextBox/RichTextBox içindeki metni okutabilmelidir. ∙ Başlat, Duraklat/Durdur ve Temizle işlevleri bulunmalıdır.
+∙ Speech-to-Text bölümünde mikrofon üzerinden alınan konuşma metin alanına aktarılmalıdır. ∙ Mikrofon veya konuşma servisine erişilemediğinde kullanıcıya anlaşılır hata mesajı verilmelidir. ∙ Arayüzde hangi işlemin aktif olduğu açıkça gösterilmelidir.
+GitHub Teslim Düzeni
+∙ Depo adı: YMH219-SpeechApp
+∙ Kaynak kodlar depoda bulunmalı; bin/, obj/, .vs/ gibi derleme klasörleri .gitignore ile dışarıda bırakılmalıdır. ∙ README.md dosyasında projenin amacı, kullanılan teknolojiler, çalıştırma adımları ve en az 2 ekran görüntüsü  bulunmalıdır.
+∙ Commit geçmişi geliştirme sürecini göstermelidir. Yalnızca son gün tek seferde yüklenen proje, Git/GitHub kullanımı  açısından eksik değerlendirilebilir.
+İsteğe Bağlı Geliştirmeler
+∙ Ses hızı veya ses seçimi
+∙ Dönüştürülen metni .txt dosyasına kaydetme
+∙ Konuşma tanıma sonucunu zaman damgasıyla listeleme
+7. Ödev — OpenCV ile Yüz Algılama ve Tanıma
+OpenCV tabanlı bir C# kütüphanesi kullanılarak kameradan veya dosyadan görüntü alınacak, yüz bölgesi tespit edilecek  ve öğrencinin oluşturduğu küçük yerel örnek küme üzerinde temel bir tanıma/etiketleme demonstrasyonu  gerçekleştirilecektir.
+Amaç ve Kullanılacak Ders Kavramları
+∙ Harici kütüphane/NuGet paketi kullanımı (OpenCvSharp veya Emgu CV gibi)
+∙ Kamera veya görüntü dosyası işleme
+∙ Sınıf/metot tasarımı ve hata yönetimi
+∙ PictureBox ve arayüz güncelleme
+Asgari Uygulama Gereksinimleri
+∙ Kamera görüntüsü veya seçilen resim uygulama içinde gösterilmelidir.
+∙ Görüntü üzerinde yüz algılandığında yüz bölgesi dikdörtgen ile işaretlenmelidir.
+∙ En az iki gönüllü/yerel örnek sınıf veya etiket ile temel tanıma gösterimi yapılmalıdır; alternatif olarak öğrenci kendi  yüzünün farklı örneklerini kullanabilir.
+∙ Algılanan/tahmin edilen etiket ve mümkünse güven skoru arayüzde gösterilmelidir.
+∙ Kamera Başlat/Durdur ve Görüntü Seç işlevleri bulunmalıdır.
+∙ Kamera veya model dosyası bulunamadığında uygulama hatayı kullanıcıya bildirmelidir.
+Kapsam ve Güvenlik Sınırı
+Bu çalışma yalnızca ders kapsamında yerel ve gönüllü örneklerle yapılmalıdır. Kamuya açık alanlarda izinsiz kimlik  takibi, gizli görüntü toplama veya gerçek kişileri uzaktan izlemeye yönelik kullanım yapılmamalıdır.
+GitHub Teslim Düzeni
+∙ Depo adı: YMH219-FaceRecognition
+∙ Kaynak kodlar depoda bulunmalı; bin/, obj/, .vs/ gibi derleme klasörleri .gitignore ile dışarıda bırakılmalıdır.
+Nesne Tabanlı Programlama · Ek Uygulama Ödevleri · Öğrenci Föyü — Sayfa 4 / 5
+∙ README.md dosyasında projenin amacı, kullanılan teknolojiler, çalıştırma adımları ve en az 2 ekran görüntüsü  bulunmalıdır.
+∙ Commit geçmişi geliştirme sürecini göstermelidir. Yalnızca son gün tek seferde yüklenen proje, Git/GitHub kullanımı  açısından eksik değerlendirilebilir.
+İsteğe Bağlı Geliştirmeler
+∙ Algılanan yüzleri ayrı klasöre kaydetme
+∙ Birden fazla yüzü aynı karede işaretleme
+∙ Basit eğitim/veri ekleme ekranı
+8. Ortak README.md İçeriği
+Her proje deposundaki README.md dosyasında en az aşağıdaki başlıkların bulunması beklenmektedir:
+∙ Proje adı ve kısa açıklama
+∙ Kullanılan teknoloji / NuGet paketleri
+∙ Kurulum ve çalıştırma adımları
+∙ Uygulamanın temel özellikleri
+∙ En az 2 ekran görüntüsü
+∙ Bilinen sınırlamalar / geliştirme notları
+∙ Öğrencinin adı-soyadı ve öğrenci numarası
+9. Değerlendirme Ölçütleri
+Her ödev 100 puan üzerinden aşağıdaki genel ölçütlere göre değerlendirilecektir. Ödevlerin ders içi nota etkisi ayrıca  Classroom/derste ilan edilen değerlendirme planına göre uygulanacaktır.
+Ölçüt Puan
+Uygulamanın çalışması ve temel işlevlerin eksiksizliği 40
+Nesne tabanlı tasarım, kod düzeni ve hata kontrolleri 20
+Arayüz kullanılabilirliği ve kullanıcı geri bildirimi 10
+Git/GitHub düzeni, anlamlı commit geçmişi ve .gitignore 15
+README.md, ekran görüntüleri ve çalıştırma açıklaması 10
+Kodun açıklanabilmesi / kısa sözlü kontrol 5
+Toplam 100
+10. Teslim Kontrol Listesi
+∙ ☐ GitHub profil bağlantımı Classroom’a ekledim.
+∙ ☐ Beş repository profilimde görünür durumda.
+∙ ☐ Her repository derlenebilir kaynak kod içeriyor.
+∙ ☐ .gitignore dosyam var; bin/obj/.vs gibi gereksiz klasörleri yüklemedim.
+∙ ☐ Her projede README.md ve en az iki ekran görüntüsü var.
+∙ ☐ Commit geçmişim geliştirme sürecini gösteriyor.
+∙ ☐ Projelerimi farklı bir bilgisayarda açıp çalıştırmayı denedim.
+∙ ☐ Teslim işlemlerini 30 Kasım 2026 saat 23:59’dan önce tamamladım.
+Not: Değerlendirme sırasında GitHub profilinizdeki repository içerikleri ve commit tarihleri esas alınacaktır.
+Nesne Tabanlı Programlama · Ek Uygulama Ödevleri · Öğrenci Föyü — Sayfa 5 / 5

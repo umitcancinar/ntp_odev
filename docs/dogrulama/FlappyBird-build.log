@@ -1,0 +1,13 @@
+  Determining projects to restore...
+  Restored /Users/umitcancinar/Desktop/ntp_5/YMH219-FlappyBird/src/FlappyBird.Core/FlappyBird.Core.csproj (in 53 ms).
+  Restored /Users/umitcancinar/Desktop/ntp_5/YMH219-FlappyBird/src/FlappyBird/FlappyBird.csproj (in 118 ms).
+  1 of 3 projects are up-to-date for restore.
+  FlappyBird.Core -> /Users/umitcancinar/Desktop/ntp_5/YMH219-FlappyBird/src/FlappyBird.Core/bin/Release/net10.0/FlappyBird.Core.dll
+  FlappyBird.Tests -> /Users/umitcancinar/Desktop/ntp_5/YMH219-FlappyBird/tests/FlappyBird.Tests/bin/Release/net10.0/FlappyBird.Tests.dll
+  FlappyBird -> /Users/umitcancinar/Desktop/ntp_5/YMH219-FlappyBird/src/FlappyBird/bin/Release/net10.0-windows/FlappyBird.dll
+
+Build succeeded.
+    0 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:02.93

@@ -1,0 +1,13 @@
+  Determining projects to restore...
+  Restored /Users/umitcancinar/Desktop/ntp_5/YMH219-FaceRecognition/src/FaceRecognition.Core/FaceRecognition.Core.csproj (in 51 ms).
+  Restored /Users/umitcancinar/Desktop/ntp_5/YMH219-FaceRecognition/src/FaceRecognition/FaceRecognition.csproj (in 185 ms).
+  1 of 3 projects are up-to-date for restore.
+  FaceRecognition.Core -> /Users/umitcancinar/Desktop/ntp_5/YMH219-FaceRecognition/src/FaceRecognition.Core/bin/Release/net10.0/FaceRecognition.Core.dll
+  FaceRecognition.Tests -> /Users/umitcancinar/Desktop/ntp_5/YMH219-FaceRecognition/tests/FaceRecognition.Tests/bin/Release/net10.0/FaceRecognition.Tests.dll
+  FaceRecognition -> /Users/umitcancinar/Desktop/ntp_5/YMH219-FaceRecognition/src/FaceRecognition/bin/Release/net10.0-windows/FaceRecognition.dll
+
+Build succeeded.
+    0 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:03.10
