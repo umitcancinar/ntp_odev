@@ -9,5 +9,9 @@ public sealed record RecognizerOption(string Id, string Name, CultureInfo Cultur
 
 public static class RecognizerSelection
 {
-    public static RecognizerOption? Choose(IReadOnlyList<RecognizerOption> installed, CultureInfo preferred) => null;
+    // The preferred UI language is a preference, never a claim that a recognizer exists.
+    public static RecognizerOption? Choose(IReadOnlyList<RecognizerOption> installed, CultureInfo preferred) =>
+        installed.FirstOrDefault(x => x.Culture.Name == preferred.Name)
+        ?? installed.FirstOrDefault(x => x.Culture.TwoLetterISOLanguageName == preferred.TwoLetterISOLanguageName)
+        ?? installed.FirstOrDefault();
 }
