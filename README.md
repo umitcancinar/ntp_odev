@@ -1,4 +1,14 @@
-# YMH219 — Beş Windows Forms Ödevi
+# YMH219 — Nesne Tabanlı Programlama Ödevleri
+
+## Haftalık laboratuvar ödevleri
+
+**[Hafta 5 Evim](Hafta5_Evim/README.md)** — sınıflar, doğrulamalı property, yapıcı metotlar, statik sayaç ve sabit adres. Dört kişilik konsol uygulaması, 20 davranış testi, özgün föy ve teslim raporları hazırdır.
+
+- [Word raporu](Hafta5_Evim/teslim/Hafta5_NTP_Odev.docx)
+- [PDF raporu](Hafta5_Evim/teslim/Hafta5_NTP_Odev.pdf)
+- [Teslim ZIP'i](Hafta5_Evim/teslim/250541009_NTP_Hafta5.zip)
+
+## Ek uygulama ödevleri
 
 Beş C#/.NET 10 Windows Forms uygulamasının kaynak kodları bu toplu çalışma deposundadır. Her proje kendi çözüm dosyası, README, testleri ve kod rehberiyle bağımsız derlenebilir. Önceki beş yerel deponun gerçek commit geçmişleri subtree aktarımıyla korunmuştur.
 

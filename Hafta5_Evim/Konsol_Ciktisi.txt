@@ -1,0 +1,10 @@
+--- EV ÜYELERİ ---
+Anne - Öğretmen - 56 yaşında
+Baba - Mühendis - 58 yaşında
+Ümitcan - Öğrenci - 22 yaşında
+Kardeş - Belirtilmedi - 18 yaşında
+
+Ortalama yaş : 38,5
+En yaşlı üye : Baba - Mühendis - 58 yaşında
+Toplam kişi : 4
+Ev adresi : Örnek Mahallesi Öğrenci Sokak No 5 Elazığ
