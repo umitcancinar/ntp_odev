@@ -20,7 +20,8 @@ Hafta 5 laboratuvar föyündeki sınıf, property, yapıcı metot ve statik üye
 - `Ev.cs`: private `List<Kisi>`, üye ekleme, listeleme, yaş ortalaması, en yaşlı kişi.
 - `Program.cs`: dört kişilik örnek evin kurulması. Kişiler ve adres **temsili örnek veridir**.
 - `Konsol_Ciktisi.txt`: 4 Kasım 2026 tarihinde program çalıştırılarak alınan gerçek çıktı.
-- [Word raporu](teslim/Hafta5_NTP_Odev.docx) ve [PDF raporu](teslim/Hafta5_NTP_Odev.pdf): tam kaynak kodlar, açıklamalar, gerçek çıktı, testler ve çalıştırma adımları.
+- [Word raporu](teslim/Hafta5_NTP_Odev.docx) ve [PDF raporu](teslim/Hafta5_NTP_Odev.pdf): üç dosyanın tam kaynak kodu kopyalanabilir metin olarak, gerçek program çıktısı ise ekran görüntüsü olarak eklenmiştir. Rapor dört sayfadır.
+- [Çıktı ekran görüntüsü](docs/screenshots/01-konsol-ciktisi.png): uygulamanın standart çıktısının yerel görüntüleyicisinden alınan gerçek tarayıcı ekran görüntüsü.
 - [Özgün föy](docs/Hafta5_Foy.pdf).
 
 ## Çalıştırma

@@ -16,3 +16,5 @@ Doğum yılı 1900'den büyük ve mevcut yıldan küçük/eşit olmalıdır. Hat
 - [x] Yalnız ilgili dosyaları commit edip mevcut main üzerine force kullanmadan gönder; uzak commit ve dosyaları doğrula.
 
 Doğrulama kaydı: 20 davranış testi önce eksik API ile 0/20, uygulama sonrası 20/20 geçti. Release çözümü 0 uyarı ve 0 hata ile derlendi. Bağımsız kod incelemesinde önemli bulgu yok. Word ve PDF beş sayfa; paketli LibreOffice renderer ile tüm PNG sayfaları görsel kontrol edildi. Gönderim kullanıcı tarafından yetkilendirildi; uzak commit doğrulaması paketleme sonrasında yapılacak.
+
+4 Kasım 2026 düzeltmesi: Kullanıcı teslimi kopyalanabilir tam kaynak kod + çıktı ekran görüntüsü şeklinde istedi. Word/PDF dört sayfaya sadeleştirildi. İlk üç sayfa Kisi.cs, Ev.cs ve Program.cs tam metni; son sayfa gerçek konsol çıktısının yerel görüntüleyicide alınan tarayıcı ekran görüntüsüdür. Bütün son sayfalar görsel olarak kontrol edildi; üç kaynak dosyanın metni ve PNG gömme işlemi yapısal olarak da doğrulandı.
