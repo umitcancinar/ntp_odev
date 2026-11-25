@@ -10,7 +10,7 @@
 
 ## Ek uygulama ödevleri
 
-Beş C#/.NET 10 Windows Forms uygulamasının kaynak kodları bu toplu çalışma deposundadır. Her proje kendi çözüm dosyası, README, testleri ve kod rehberiyle bağımsız derlenebilir. Önceki beş yerel deponun gerçek commit geçmişleri subtree aktarımıyla korunmuştur.
+C#/.NET 10 Windows Forms uygulamalarının kaynak kodları bu toplu çalışma deposundadır. Her proje kendi çözüm dosyası, README, testleri ve kod rehberiyle bağımsız derlenebilir.
 
 | Depo | Uygulama | Başlangıç |
 |---|---|---|
@@ -19,6 +19,7 @@ Beş C#/.NET 10 Windows Forms uygulamasının kaynak kodları bu toplu çalışm
 | [YMH219-ChatApp](YMH219-ChatApp/README.md) | Asenkron TCP sunucu ve istemci | `src/ChatApp` |
 | [YMH219-SpeechApp](YMH219-SpeechApp/README.md) | Windows SAPI ile TTS ve STT | `src/SpeechApp` |
 | [YMH219-FaceRecognition](YMH219-FaceRecognition/README.md) | OpenCV algılama ve yerel LBPH tanıma | `src/FaceRecognition` |
+| [YMH219-NotepadApp](YMH219-NotepadApp/README.md) | JSON serileştirme, arama/filtreleme, TXT dışa aktarma | `src/NotepadApp` |
 
 ## Windows'ta hızlı başlangıç
 
